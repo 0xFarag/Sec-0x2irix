@@ -1,0 +1,30 @@
+﻿Name,Tags
+Same-Origin Policy,Basics
+Content Security Policy,Basics
+PHP Type Juggling,Vulnerability
+Cross-Site Scripting [XSS],Client-Side Attacks
+Cross-Site Request Forgery [CSRF],Client-Side Attacks
+Cross-Origin Resource Sharing [CORS],Client-Side Attacks
+DOM-Based Vulnerabilities,Client-Side Attacks
+Clickjacking,Client-Side Attacks
+"WebSockets ",Client-Side Attacks
+SQL Injection,Server-Side Attacks
+XML External Entity (XXE) Injection,Server-Side Attacks
+NoSQL Injection,Server-Side Attacks
+File Upload Attacks,Server-Side Attacks
+Server-Side Request Forgery [SSRF],Server-Side Attacks
+OS Command Injection,Server-Side Attacks
+Race Conditions,Server-Side Attacks
+Business Logic Vulnerabilities,Server-Side Attacks
+IDOR,Server-Side Attacks
+File Inclusions,Server-Side Attacks
+Server-Side Parameter Pollution,Server-Side Attacks
+Response Manipulation,Server-Side Attacks
+Insecure deserialization,Advanced Attacks
+Web Cache Poisoning,Advanced Attacks
+Web Cache Deception,Advanced Attacks
+JWT Attacks,Advanced Attacks
+OAuth 2.0 authentication vulnerabilities,Advanced Attacks
+HTTP Host header attacks,Advanced Attacks
+Server-Side Template Injection [SSTI],Advanced Attacks
+HTTP Request Smuggling,Advanced Attacks
