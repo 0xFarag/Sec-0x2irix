@@ -49,6 +49,7 @@
         * [sync breeze](integrations/buffer-overflow-bof/windows-bof/bof-machine/sync-breeze.md)
   * [Client-Side Attacks](integrations/client-side-attacks.md)
   * [Antivirus Evasion](integrations/antivirus-evasion.md)
+  * [Linux Privilege Escalation](integrations/linux-privilege-escalation.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
