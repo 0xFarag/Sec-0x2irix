@@ -52,6 +52,8 @@
   * [Linux Privilege Escalation](integrations/linux-privilege-escalation/README.md)
     * [What is Privilege Escalation?](integrations/linux-privilege-escalation/what-is-privilege-escalation.md)
     * [Base Enumeration](integrations/linux-privilege-escalation/base-enumeration.md)
+    * [Linux Privilege Arena & HTB](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/README.md)
+      * [Kernel Exploit](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/kernel-exploit.md)
     * [Super Process Machine](integrations/linux-privilege-escalation/super-process-machine.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
