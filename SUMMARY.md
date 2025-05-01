@@ -52,6 +52,7 @@
   * [Linux Privilege Escalation](integrations/linux-privilege-escalation/README.md)
     * [What is Privilege Escalation?](integrations/linux-privilege-escalation/what-is-privilege-escalation.md)
     * [Base Enumeration](integrations/linux-privilege-escalation/base-enumeration.md)
+    * [Super Process Machine](integrations/linux-privilege-escalation/super-process-machine.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
