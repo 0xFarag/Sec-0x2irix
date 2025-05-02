@@ -55,6 +55,7 @@
     * [Linux Privilege Arena & HTB](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/README.md)
       * [Kernel Exploit](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/kernel-exploit.md)
       * [Config File](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/config-file.md)
+      * [History](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/history.md)
     * [Super Process Machine](integrations/linux-privilege-escalation/super-process-machine.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
