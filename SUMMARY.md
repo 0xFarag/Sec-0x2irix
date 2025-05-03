@@ -56,6 +56,7 @@
       * [Kernel Exploit](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/kernel-exploit.md)
       * [Config File](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/config-file.md)
       * [History](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/history.md)
+      * [Weak file permission](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/weak-file-permission.md)
     * [Super Process Machine](integrations/linux-privilege-escalation/super-process-machine.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
