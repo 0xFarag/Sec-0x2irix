@@ -80,6 +80,8 @@
       * [UAC & Runas](integrations/windows-privesc/windows-commands/uac-and-runas.md)
       * [Credentials](integrations/windows-privesc/windows-commands/credentials.md)
       * [Security Policy](integrations/windows-privesc/windows-commands/security-policy.md)
+    * [Manual Enumeration](integrations/windows-privesc/manual-enumeration.md)
+    * [Automation Enumeration](integrations/windows-privesc/automation-enumeration.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
