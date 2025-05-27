@@ -32,4 +32,4 @@
 * The client presents the **Service Ticket** to the target service (e.g., File Server).
 * If valid and authorized, access is granted.
 
-![image.png](<../../.gitbook/assets/image (20).png>)
+![image.png](<../../../.gitbook/assets/image (20).png>)
