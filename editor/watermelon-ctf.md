@@ -26,19 +26,19 @@ At first lets understand what’s this challenge, No form or any information in 
 
 so let’s check the page source to see if there any endpoint is stored but we not found anything. so let’s run any automation tool discover the endpoint in this website, i prefer to use `dirsearch`
 
-<figure><img src="../.gitbook/assets/image 1 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
 I found 6 endpoint let’s check the first endpoint in the website call `/register` but it’s not acceptable with GET Method
 
-<figure><img src="../.gitbook/assets/image 2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 2 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
 change the GET Method to POST method but nothing but wait i noticed in the response it need header call `Content-Type` and the value is `application/json`
 
-<figure><img src="../.gitbook/assets/image 3 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 3 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 remove anything in the request except `method`,`Host`,`content-type` and send the request again.
 
@@ -62,11 +62,11 @@ change it to POST and sent at again but he need the content type is json too so 
 
 we success to login in this website but there is 4 endpoint we don’t know any thing about it
 
-<figure><img src="../.gitbook/assets/image 4 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After add the `/profile` to url we get error message say `Unauthorized access` , add cookie in the request and send it again
 
-<figure><img src="../.gitbook/assets/image 5 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 5 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 the response say my id is 3 so is found another 2 account in the server one of this account i used it when we test the application with id 2 that’s meaning the user with id 1 we don’t know anything about it ..
 
@@ -87,7 +87,7 @@ i return to the application map and think a little for `/upload` we can take RCE
 
 just return the previous steps → method , cookie but i used chat gpt to create upload request to send it by burp
 
-<figure><img src="../.gitbook/assets/image 6 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 6 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 the file is save in this path `files/2` is a LFI vulnerability ?? but do not rush to judge we need to read this file first by `/files` endpoint
 
