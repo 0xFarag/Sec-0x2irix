@@ -62,6 +62,7 @@
       * [Abusing attended functionality](integrations/linux-privilege-escalation/linux-privilege-arena-and-htb/abusing-attended-functionality.md)
     * [Super Process Machine](integrations/linux-privilege-escalation/super-process-machine.md)
     * [Anonymous Machine](integrations/linux-privilege-escalation/anonymous-machine.md)
+    * [Checklist](integrations/linux-privilege-escalation/checklist.md)
 * [🛜 Wireless pentest](wireless-pentest.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
