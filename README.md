@@ -29,7 +29,7 @@ Hello there! I'm Ahmed Farag, an avid cybersecurity enthusiast, embarking on a j
 
 Dive into various cybersecurity fields with me, including:
 
-* Web AppSec, Android AppSec, Network Sec, Bug Boutny, API Sec, Operating Systems, Programming, Wireless Sec ... and many more security-related topics.
+* Web AppSec, Android AppSec, Network Sec,Wireless Sec,API Sec, Bug Boutny, Operating Systems, Programming ... and many more security-related topics.
 
 #### What to Expect: <a href="#what-to-expect" id="what-to-expect"></a>
 
