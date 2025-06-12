@@ -2,6 +2,7 @@
 
 * [🧠 Whoami](README.md)
 * [🕸️ Web pentest](markdown/README.md)
+  * [Reconnaissance](markdown/reconnaissance.md)
   * [Server-side template injection \[SSTI\]](markdown/server-side-template-injection-ssti.md)
   * [HTTP Host header attacks](markdown/http-host-header-attacks/README.md)
     * [Password reset poisoning via dangling markup](markdown/http-host-header-attacks/password-reset-poisoning-via-dangling-markup.md)
