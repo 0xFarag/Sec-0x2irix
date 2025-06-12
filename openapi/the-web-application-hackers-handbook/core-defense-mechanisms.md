@@ -83,7 +83,7 @@ suppose all user inputs is malicious and must be filtered
     ```
 * **Boundary Validation**→ like checking your bag at different checkpoints before entering a place. At each checkpoint, the data (like a user’s info) is checked to make sure it’s safe. For example, when someone logs in, the username and password are checked for mistakes first, then they’re safely used in a database search, then passed to other services without causing issues, and finally shown on the screen in a secure way. This helps stop problems like hacking or breaking the app.
 
-<figure><img src="../../.gitbook/assets/image 1 (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 1 (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Multistep Validation and Canonicalization** → When you receive data from a user, there might be steps to filter or sanitize it. But if you're cleaning things up in multiple steps, sometimes attackers can slip malicious data between those steps if you're not careful. For example, if you try to block `<script>` tags, an attacker might sneak them in as `<scr<script>ipt>`. Also, if you're trying to block certain characters like quotation marks, they might use encoding tricks like `%27` to bypass your checks.
 
@@ -93,7 +93,7 @@ suppose all user inputs is malicious and must be filtered
 
 * **Handling errors** → application must handle error without any message for user to how can solve this error like:
 
-<figure><img src="../../.gitbook/assets/image 2 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 2 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 *   **Maintaining audit logs** → help owners to understand what happen exactly what has taken place, which vulnerabilities (if any) were exploited
 
