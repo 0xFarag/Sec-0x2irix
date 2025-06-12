@@ -9,6 +9,7 @@
   * [Cross-Site Request Forgery \[CSRF\]](markdown/cross-site-request-forgery-csrf.md)
   * [Race Conditions](markdown/race-conditions.md)
   * [information disclosure](markdown/information-disclosure.md)
+  * [Check list](markdown/check-list.md)
 * [⚕️ API pentest](api-pentest.md)
 * [🌃 Network pentest](integrations/README.md)
   * [Footprinting](integrations/footprinting/README.md)
