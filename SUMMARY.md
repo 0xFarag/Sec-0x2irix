@@ -120,6 +120,7 @@
       * [Targeted packet sniffing](wireless-pentest/attacks/airodump-ng/targeted-packet-sniffing.md)
     * [Deauthentication Attack](wireless-pentest/attacks/deauthentication-attack.md)
     * [Rouge Access Point](wireless-pentest/attacks/rouge-access-point.md)
+    * [Creating a rogue AP](wireless-pentest/attacks/creating-a-rogue-ap.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
