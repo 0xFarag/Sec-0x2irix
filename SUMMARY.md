@@ -121,6 +121,8 @@
     * [Deauthentication Attack](wireless-pentest/attacks/deauthentication-attack.md)
     * [Rouge Access Point](wireless-pentest/attacks/rouge-access-point.md)
     * [Creating a rogue AP](wireless-pentest/attacks/creating-a-rogue-ap.md)
+    * [WEP](wireless-pentest/attacks/wep/README.md)
+      * [WEP cracking](wireless-pentest/attacks/wep/wep-cracking.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)

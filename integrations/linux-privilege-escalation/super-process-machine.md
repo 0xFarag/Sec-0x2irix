@@ -2,11 +2,11 @@
 
 Start with scan IP of machine
 
-![image.png](<../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![image.png](<../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 after search for `medusa` service we found CVE https://www.exploit-db.com/exploits/42779 which we can use Metasploit to exploit this service
 
-<figure><img src="../../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 we success to take a reverse shell on this machine
 

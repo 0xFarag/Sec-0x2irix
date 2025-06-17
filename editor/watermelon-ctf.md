@@ -26,7 +26,7 @@ At first lets understand what’s this challenge, No form or any information in 
 
 so let’s check the page source to see if there any endpoint is stored but we not found anything. so let’s run any automation tool discover the endpoint in this website, i prefer to use `dirsearch`
 
-<figure><img src="../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 

@@ -40,9 +40,9 @@ line_send_tcp 192.168.1.4 21 /usr/share/spike/audits/FTPD/ftpd1.spk 0 0
 
 but our machine run on port 9999 , we haven't script for this port in spike so let's create it by T**run()** function&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
 <figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Before System crash
 
