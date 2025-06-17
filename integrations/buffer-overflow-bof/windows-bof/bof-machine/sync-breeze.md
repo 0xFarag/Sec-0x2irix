@@ -1,6 +1,6 @@
 # sync breeze
 
-![image.png](<../../../../.gitbook/assets/image (2) (1) (1) (1).png>)
+![image.png](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
 
 *   **Scan machine**
 

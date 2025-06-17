@@ -123,6 +123,8 @@
     * [Creating a rogue AP](wireless-pentest/attacks/creating-a-rogue-ap.md)
     * [WEP](wireless-pentest/attacks/wep/README.md)
       * [WEP cracking](wireless-pentest/attacks/wep/wep-cracking.md)
+      * [Fake Authentication Attack](wireless-pentest/attacks/wep/fake-authentication-attack.md)
+      * [Fragmentation Attack](wireless-pentest/attacks/wep/fragmentation-attack.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
