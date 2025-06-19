@@ -127,6 +127,7 @@
       * [Fragmentation Attack](wireless-pentest/attacks/wep/fragmentation-attack.md)
       * [Automate Wep cracking](wireless-pentest/attacks/wep/automate-wep-cracking.md)
       * [Wep connect after hack](wireless-pentest/attacks/wep/wep-connect-after-hack.md)
+    * [WPA2](wireless-pentest/attacks/wpa2.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
