@@ -130,6 +130,7 @@
     * [WPA2](wireless-pentest/attacks/wpa2/README.md)
       * [Capture and Crack WPA2](wireless-pentest/attacks/wpa2/capture-and-crack-wpa2.md)
       * [installation](wireless-pentest/attacks/wpa2/installation.md)
+      * [Half Handshake Attack](wireless-pentest/attacks/wpa2/half-handshake-attack.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
