@@ -129,6 +129,7 @@
       * [Wep connect after hack](wireless-pentest/attacks/wep/wep-connect-after-hack.md)
     * [WPA2](wireless-pentest/attacks/wpa2/README.md)
       * [Capture and Crack WPA2](wireless-pentest/attacks/wpa2/capture-and-crack-wpa2.md)
+      * [installation](wireless-pentest/attacks/wpa2/installation.md)
 * [📱 Mobile Pentest](mobile-pentest.md)
 * [👨‍💻 Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
