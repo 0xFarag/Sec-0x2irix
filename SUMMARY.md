@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🧠 Whoami](README.md)
+* [Whoami](README.md)
 * [🕸️ Web pentest](markdown/README.md)
   * [Reconnaissance](markdown/reconnaissance.md)
   * [Server-side template injection \[SSTI\]](markdown/server-side-template-injection-ssti.md)

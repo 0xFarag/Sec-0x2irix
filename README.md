@@ -1,4 +1,5 @@
 ---
+icon: head-side-goggles
 cover: .gitbook/assets/wallpaperflare.com_wallpaper (4).jpg
 coverY: 0
 layout:
@@ -17,7 +18,7 @@ layout:
     visible: true
 ---
 
-# 🧠 Whoami
+# Whoami
 
 Ahmed Farag(0x2iRIx) | Pentester | BugHunter | Coder
 
