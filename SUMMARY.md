@@ -135,6 +135,8 @@
       * [Capture and Crack WPA2](wireless-pentest/attacks/wpa2/capture-and-crack-wpa2.md)
       * [installation](wireless-pentest/attacks/wpa2/installation.md)
       * [Half Handshake Attack](wireless-pentest/attacks/wpa2/half-handshake-attack.md)
+    * [Enterprise network](wireless-pentest/attacks/enterprise-network/README.md)
+      * [Attacks against Enterprise Networks](wireless-pentest/attacks/enterprise-network/attacks-against-enterprise-networks.md)
 * [Mobile Pentest](mobile-pentest.md)
 * [Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
