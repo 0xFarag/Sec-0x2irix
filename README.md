@@ -38,7 +38,7 @@ Hello there! Iam 0x2iRIx, a passionate cybersecurity enthusiast on a mission to 
 ┌──(0x2iRIx㉿CyberWorld)-[~/notes]
 └─$ cat README.md
 This space contains my curated cybersecurity notes—collected, tested, and constantly updated from real-world experience, labs, and writeups.
-Some content might feel familiar, but it's tailored for both personal reference and to support others on their infosec journey.
+Some content might feel familiar, but it is tailored for both personal reference and to support others on their infosec journey.
 
 ┌──(0x2iRIx㉿CyberWorld)-[~/]
 └─$ echo "Stay Curious. Stay Secure."
