@@ -1,4 +1,8 @@
-# 🔗 Contact me
+---
+icon: address-book
+---
+
+# Contact me
 
 <mark style="color:red;">**LinkedIn**</mark> : [https://www.linkedin.com/in/irix/](https://www.linkedin.com/in/irix/)
 
