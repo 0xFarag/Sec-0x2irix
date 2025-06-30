@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Whoami](README.md)
-* [🕸️ Web pentest](markdown/README.md)
+* [Web pentest](markdown/README.md)
   * [Reconnaissance](markdown/reconnaissance.md)
   * [Server-side template injection \[SSTI\]](markdown/server-side-template-injection-ssti.md)
   * [HTTP Host header attacks](markdown/http-host-header-attacks/README.md)
@@ -10,8 +10,8 @@
   * [Race Conditions](markdown/race-conditions.md)
   * [information disclosure](markdown/information-disclosure.md)
   * [Check list](markdown/check-list.md)
-* [⚕️ API pentest](api-pentest.md)
-* [🌃 Network pentest](integrations/README.md)
+* [API pentest](api-pentest.md)
+* [Network pentest](integrations/README.md)
   * [Footprinting](integrations/footprinting/README.md)
     * [Intoduction](integrations/footprinting/intoduction.md)
     * [FTP](integrations/footprinting/ftp.md)
@@ -103,7 +103,7 @@
       * [Security Policy](integrations/windows-privesc/windows-commands/security-policy.md)
     * [Manual Enumeration](integrations/windows-privesc/manual-enumeration.md)
     * [Automation Enumeration](integrations/windows-privesc/automation-enumeration.md)
-* [🛜 Wireless pentest](wireless-pentest/README.md)
+* [Wireless pentest](wireless-pentest/README.md)
   * [Wireless communication](wireless-pentest/wireless-communication.md)
   * [Common used](wireless-pentest/common-used.md)
   * [Wireless Radio Channels](wireless-pentest/wireless-radio-channels.md)

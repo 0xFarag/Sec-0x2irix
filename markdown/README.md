@@ -1,7 +1,8 @@
 ---
-cover: ../.gitbook/assets/wallpaperflare.com_wallpaper (3) (1).jpg
+icon: spider-web
+cover: ../.gitbook/assets/middle school website GIF by Sarah Schmidt.gif
 coverY: 0
 ---
 
-# 🕸️ Web pentest
+# Web pentest
 
