@@ -95,6 +95,8 @@
       * [Authentication Process](integrations/active-directory/authentication/authentication-process.md)
     * [Enumeration](integrations/active-directory/enumeration/README.md)
       * [Using PowerView](integrations/active-directory/enumeration/using-powerview.md)
+      * [Using AD Module](integrations/active-directory/enumeration/using-ad-module.md)
+      * [Using BloodHound](integrations/active-directory/enumeration/using-bloodhound.md)
   * [Windows PrivEsc](integrations/windows-privesc/README.md)
     * [Windows Commands](integrations/windows-privesc/windows-commands/README.md)
       * [Common commands](integrations/windows-privesc/windows-commands/common-commands.md)
