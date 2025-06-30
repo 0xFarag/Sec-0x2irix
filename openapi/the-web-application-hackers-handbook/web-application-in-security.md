@@ -1,4 +1,8 @@
-# 1️⃣ Web Application (In)security
+---
+icon: '1'
+---
+
+# Web Application (In)security
 
 This chapter takes a brief look at how web applications have evolved and the many benefits they provide.
 

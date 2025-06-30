@@ -1,4 +1,8 @@
-# 3️⃣ Web Application Technologies
+---
+icon: '3'
+---
+
+# Web Application Technologies
 
 ### HTTP Method
 

@@ -1,2 +1,6 @@
-# 5️⃣ Bypassing Client-Side Controls
+---
+icon: '5'
+---
+
+# Bypassing Client-Side Controls
 

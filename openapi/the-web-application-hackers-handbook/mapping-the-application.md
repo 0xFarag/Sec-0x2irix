@@ -1,4 +1,8 @@
-# 4️⃣ Mapping the Application
+---
+icon: '4'
+---
+
+# Mapping the Application
 
 The first step in attacking an application is gathering key information to understand its structure. This involves mapping its content and functionality, identifying visible and hidden features. Once mapped, the focus shifts to analyzing its security mechanisms and technologies (client-side & server-side) to pinpoint potential attack surfaces. This chapter covers practical steps, techniques, and tools to enhance application mapping efficiency.
 
@@ -126,8 +130,6 @@ The first step in attacking an application is gathering key information to under
     * Every time you discover **a new directory or file**, use it as a starting point for deeper testing.
     * Example: If `EditUser.php` exists, try guessing `DeleteUser.php`, `AddUser.php`, etc.
 
-    ***
-
     #### **Summary:**
 
     🔍 **Brute-force helps find hidden pages and files.**
@@ -145,8 +147,6 @@ The first step in attacking an application is gathering key information to under
 *   Inference from Published Content
 
     Most web applications follow **specific naming patterns** for their files and directories. By analyzing existing pages, we can **predict and discover hidde content** more effectively.
-
-    ***
 
     #### **How Does It Work?**
 
@@ -240,8 +240,6 @@ The first step in attacking an application is gathering key information to under
         DeleteOrder.jsp
         ```
 
-    ***
-
     #### **Summary:**
 
     🔍 **Look at existing pages to predict hidden ones.**
@@ -307,8 +305,6 @@ The first step in attacking an application is gathering key information to under
 
     Web server vulnerabilities can reveal **hidden content and functionality** not directly linked within the application. These flaws allow attackers to gather sensitive information or identify weak points.
 
-    ***
-
     **How Web Server Vulnerabilities Help Attackers**
 
     1. **Directory Listing**:
@@ -319,8 +315,6 @@ The first step in attacking an application is gathering key information to under
        * Servers may have **test scripts or old diagnostic files** that contain **known vulnerabilities**.
     4. **Third-Party Components**:
        * Web apps often use **pre-built components** (like shopping carts or email integrations), which can have **security flaws** if outdated.
-
-    ***
 
     **Using Nikto to Scan Web Servers**
 
@@ -351,15 +345,11 @@ The first step in attacking an application is gathering key information to under
 
     ```
 
-    ***
-
     **Nikto Options**
 
     * **Custom directories**: Use `-root /cgi/` if files are in nonstandard locations.
     * **Custom 404 pages**: If the site uses a custom error page, use `404` to identify it.
     * **Manual Verification**: Always **double-check results**—Nikto can produce **false positives**.
-
-    ***
 
     #### **In Short:**
 
@@ -369,17 +359,11 @@ The first step in attacking an application is gathering key information to under
 
     ✔️ **Always verify results manually** to confirm real vulnerabilities.
 
-    ***
-
-    ***
-
     #### **Discovering Hidden Parameters in Requests**
 
     **The Issue:**
 
     Some applications accept **hidden parameters** that significantly alter behavior. For example, adding `debug=true` might **disable security checks**, **bypass access controls**, or **leak sensitive debugging data**. These parameters are often not visible in URLs or forms, making them hard to detect.
-
-    ***
 
     #### **Security Testing Steps:**
 
@@ -424,8 +408,6 @@ The first step in attacking an application is gathering key information to under
 
     Mapping content alone is not enough; you must understand **how the application works**, **technologies used**, and **potential attack surfaces** to identify exploitable vulnerabilities.
 
-    ***
-
     **Key Areas to Investigate:**
 
     1. **Core functionality** – What can the application do under normal conditions?
@@ -435,10 +417,6 @@ The first step in attacking an application is gathering key information to under
     5. **Client-side technologies** – Forms, JavaScript, Java Applets, ActiveX, Flash.
     6. **Server-side technologies** – Static vs. dynamic pages, SSL, web servers, databases.
     7. **Internal application structure** – How backend logic and responses reveal hidden details.
-
-    ***
-
-    ***
 
     #### **Identifying Entry Points for User Input**
 
@@ -450,8 +428,6 @@ The first step in attacking an application is gathering key information to under
     4. **Cookies**: Data stored in cookies.
     5. **HTTP Headers**: Sometimes headers like `User-Agent`, `Referer`, `Accept`, `Accept-Language`, and `Host` are processed by the app.
 
-    ***
-
     **Non-Standard Query Strings**
 
     Some apps use custom formats for query strings instead of the standard `?param=value&param2=value2`. Examples:
@@ -462,8 +438,6 @@ The first step in attacking an application is gathering key information to under
 
     If the app uses non-standard formats, you need to adjust your testing to account for these. For example, if the query string contains embedded XML, you should test within the XML fields for vulnerabilities like SQL injection.
 
-    ***
-
     **Out-of-Band Entry Points**
 
     Some apps take user input from places outside the usual HTTP traffic. These are harder to detect and require understanding the app’s functionality. Examples:
@@ -471,8 +445,6 @@ The first step in attacking an application is gathering key information to under
     * A **webmail app** that processes emails received via SMTP.
     * A **publishing app** that fetches content from another server via HTTP.
     * An **intrusion detection app** that collects data using a network sniffer and displays it in a web interface.
-
-    ***
 
     **Key Takeaways**
 
@@ -488,8 +460,6 @@ The first step in attacking an application is gathering key information to under
 
     To understand how user data is processed, identify all possible ways users can send data to the server.
 
-    ***
-
     #### **Key Entry Points:**
 
     1. **URLs** – Before the `?` marker.
@@ -497,8 +467,6 @@ The first step in attacking an application is gathering key information to under
     3. **POST request body parameters** – Form data or login credentials.
     4. **Cookies** – Used for sessions and user permissions.
     5. **HTTP headers** – Some apps process headers like `User-Agent`, `Referer`, `Accept`, etc.
-
-    ***
 
     #### **Non-Standard Query String Formats**
 
@@ -510,8 +478,6 @@ The first step in attacking an application is gathering key information to under
 
     🔍 **Ignoring these formats can lead to missing vulnerabilities like SQL Injection or Path Traversal.**
 
-    ***
-
     #### **Out-of-Band Input Channels**
 
     Some applications process user-controlled data **outside normal HTTP requests**, e.g.:
@@ -521,8 +487,6 @@ The first step in attacking an application is gathering key information to under
     3. **IDS apps** capturing network traffic and displaying it via a web UI.
 
     📌 **These require deeper context understanding to detect security risks.**
-
-    ***
 
 ***
 

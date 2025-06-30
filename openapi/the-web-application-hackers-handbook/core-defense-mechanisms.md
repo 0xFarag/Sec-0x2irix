@@ -1,4 +1,8 @@
-# 2️⃣ Core Defense Mechanisms
+---
+icon: '2'
+---
+
+# Core Defense Mechanisms
 
 ### Core elements for defense mechanism for web App :
 
