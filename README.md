@@ -27,7 +27,7 @@ layout:
 
 ┌──(0x2iRIx㉿CyberWorld)-[~/]
 └─$ echo "Welcome to My Cybersecurity World!"
-Hello there! I'm 0x2iRIx, a passionate cybersecurity enthusiast on a mission to explore, learn, and share knowledge across the digital security landscape.
+Hello there! Iam 0x2iRIx, a passionate cybersecurity enthusiast on a mission to explore, learn, and share knowledge across the digital security landscape.
 
 ┌──(0x2iRIx㉿CyberWorld)-[~/fields]
 └─$ ls
