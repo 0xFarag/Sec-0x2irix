@@ -2,7 +2,7 @@
 
 start to know which process run with sudo privilege `sudo -l`
 
-![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 we will exploit all service
 

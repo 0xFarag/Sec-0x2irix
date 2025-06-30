@@ -8,7 +8,7 @@ cat /etc/crontab
 find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
 ```
 
-![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 we found two bash script so let’s know the privileges of this files
 

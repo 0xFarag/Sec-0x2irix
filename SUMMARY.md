@@ -137,6 +137,8 @@
       * [Half Handshake Attack](wireless-pentest/attacks/wpa2/half-handshake-attack.md)
     * [Enterprise network](wireless-pentest/attacks/enterprise-network/README.md)
       * [Attacks against Enterprise Networks](wireless-pentest/attacks/enterprise-network/attacks-against-enterprise-networks.md)
+      * [Cracking Enterprise Networks Using Eaphammer Tool](wireless-pentest/attacks/enterprise-network/cracking-enterprise-networks-using-eaphammer-tool.md)
+      * [Extracting TLS Certificates from MGT Network](wireless-pentest/attacks/enterprise-network/extracting-tls-certificates-from-mgt-network.md)
 * [Mobile Pentest](mobile-pentest.md)
 * [Programming](interactive-blocks/README.md)
   * [Bash](interactive-blocks/bash.md)
