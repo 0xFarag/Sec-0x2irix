@@ -2,20 +2,6 @@
 icon: hashtag
 cover: .gitbook/assets/wallpaperflare.com_wallpaper (4).jpg
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Whoami
