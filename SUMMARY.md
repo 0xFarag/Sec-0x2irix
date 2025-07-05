@@ -117,6 +117,7 @@
       * [Reverse Shell](integrations/windows-privesc/thm/reverse-shell.md)
       * [Autorun](integrations/windows-privesc/thm/autorun.md)
       * [AlwaysInstallElevated](integrations/windows-privesc/thm/alwaysinstallelevated.md)
+      * [Service Escalation - Registry](integrations/windows-privesc/thm/service-escalation-registry.md)
 * [Wireless pentest](wireless-pentest/README.md)
   * [Wireless communication](wireless-pentest/wireless-communication.md)
   * [Common used](wireless-pentest/common-used.md)
