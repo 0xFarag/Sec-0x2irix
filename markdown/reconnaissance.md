@@ -106,7 +106,7 @@ cat subs.txt | httpx -fc 403,401,302,301,404 -o 200.txt
 cat subs.txt | httpx -pa -p -o ips.txt
 ```
 
-### <mark style="color:red;">**port scanning**</mark>
+### <mark style="color:red;">**Port Scanning**</mark>
 
 ```bash
 # part of ports
@@ -134,7 +134,7 @@ shodan init API_KEY
 
 ```
 
-## <mark style="color:red;">**endpoints**</mark>
+## <mark style="color:red;">**Endpoints**</mark>
 
 ### waybackurl
 
@@ -160,7 +160,7 @@ gospider -s httpx -o gospider_output
 cat *.txt | anew >> endpoint.txt
 ```
 
-## <mark style="color:red;">**auto scan**</mark>
+## <mark style="color:red;">**Auto scan**</mark>
 
 ```jsx
 nuclei -l live_subs_domain.com.txt -rl 10 -bs 2 -c 2 -as -silent -s critical,high,medium
@@ -186,11 +186,15 @@ dig +noall +answer @spacific_DNS_Server microsoft.com ANY # to search in specifi
 
 ```
 
+### Extract IPs
+
 ```bash
 # extract IPs
 ## for search each service is locally or upload on cloud
 for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
 ```
+
+### Search in shodan using IPs
 
 ```bash
 # search in shodan using IPs
@@ -203,127 +207,128 @@ shodan init API_KEY
 
 use for search on file : [https://buckets.grayhatwarfare.com/](https://buckets.grayhatwarfare.com/)
 
-Censys
+### Censys
 
 [https://search.censys.io/](https://search.censys.io/)
 
-*   <mark style="color:red;">**Directory**</mark>
+## <mark style="color:red;">**Directory**</mark>
 
-    dirsearch
+### dirsearch
 
-    ```bash
-    dirsearch -l 200.txt --full-url --crawl -o dir.txt
-    ```
+```bash
+dirsearch -l 200.txt --full-url --crawl -o dir.txt
+```
 
-    dirsearch files
+### dirsearch files
 
-    ```bash
-    dirsearch -l 200.txt -o dirsearch.txt -i 200  -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,<http://sql.zip>,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip,.log,.xml,.js.,.json
-    ```
-*   <mark style="color:red;">**Parameter**</mark>
+```bash
+dirsearch -l 200.txt -o dirsearch.txt -i 200  -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,<http://sql.zip>,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip,.log,.xml,.js.,.json
+```
 
-    **ParamMiner**
+## <mark style="color:red;">**JS files**</mark>
 
-    for hidden parameter
+### waybackurls
 
-    ```
-    arjun -u <https://example.com/page>
-    ```
-*   <mark style="color:red;">**JS files**</mark>
+```bash
+cat way.txt | grep -e "\\.js" | tee -a jsinv.txt
+```
 
-    waybackurls
+```bash
+# check, if they are actually available
+cat js-urls.txt | parallel -j50 -q curl -w 'Status:%{http_code}\\t Size:%{size_download}\\t %{url_effective}\\n' -o /dev/null -sk | grep Status:200
+```
 
-    ```bash
-    cat way.txt | grep -e "\\.js" | tee -a jsinv.txt
-    ```
+## <mark style="color:red;">**API leak**</mark>
 
-    ```bash
-    # check, if they are actually available
-    cat js-urls.txt | parallel -j50 -q curl -w 'Status:%{http_code}\\t Size:%{size_download}\\t %{url_effective}\\n' -o /dev/null -sk | grep Status:200
-    ```
-*   <mark style="color:red;">**API leak**</mark>
+### mantra
 
-    mantra
+```bash
+cat js.txt | mantra
+```
 
-    ```bash
-    cat js.txt | mantra
-    ```
+### nuclei
 
-    nuclei
+```bash
+nuclei -l js.txt -t /nuclie-temlates/http/exposure -o nuc.txt
+```
 
-    ```bash
-    nuclei -l js.txt -t /nuclie-temlates/http/exposure -o nuc.txt
-    ```
-*   <mark style="color:red;">**NMAP**</mark>
+## <mark style="color:red;">**NMAP**</mark>
 
-    ```bash
-    # nmap -iL allsubs.txt -o nmap.txt
-    after finding open port as 22,21,25,111,139,445,etc...
-    # nmap <ip> -sV
-    then search for exploit in google
+```bash
+# nmap -iL allsubs.txt -o nmap.txt
+after finding open port as 22,21,25,111,139,445,etc...
+# nmap <ip> -sV
+then search for exploit in google
 
-    to see the scripts of nmap 
-    # cd /usr/share/nmap/scripts
-    # ls 
-    to grep only scripts related to ssh or anything else
-    # ls | grep ssh
-    to use all scripts related to ssh
-    # nmap 192.168.1.1 --scripts=ssh*
-    to use specific script for exmaple ssh-brute.nse
-    # nmap 192.168.1.1 --script=ssh-brute.nse
+to see the scripts of nmap 
+# cd /usr/share/nmap/scripts
+# ls 
+to grep only scripts related to ssh or anything else
+# ls | grep ssh
+to use all scripts related to ssh
+# nmap 192.168.1.1 --scripts=ssh*
+to use specific script for exmaple ssh-brute.nse
+# nmap 192.168.1.1 --script=ssh-brute.nse
 
-    to use all vulnerable scripts to check for vulnerabilities 
-    # nmap 192.168.1.1 --script=vuln
-    # nmap 192.168.1.1 --script=exploit
+to use all vulnerable scripts to check for vulnerabilities 
+# nmap 192.168.1.1 --script=vuln
+# nmap 192.168.1.1 --script=exploit
 
-    to bypass the firewall 
-    # nmap -sS -Pn -n 192.168.1.1 
+to bypass the firewall 
+# nmap -sS -Pn -n 192.168.1.1 
 
-    to use fragment mode to bypass the firewall 
-    # nmap -f 192.168.1.1
+to use fragment mode to bypass the firewall 
+# nmap -f 192.168.1.1
 
-    ```
-*   <mark style="color:red;">**Http request smuggling**</mark>
+```
 
-    ```bash
-    1- use smuggler to check request smuggling vulnerablitiy 
-    # cat httpx.txt | smuggler.py | tee -a smuggler.txt
-    ```
-*   <mark style="color:red;">**Parameters**</mark>
+## <mark style="color:red;">**Http request smuggling**</mark>
 
-    extract PHP file
+```bash
+1- use smuggler to check request smuggling vulnerablitiy 
+# cat httpx.txt | smuggler.py | tee -a smuggler.txt
+```
 
-    ```bash
-    cat allurls.txt | grep -E "\\.php" >> php.txt
-    ```
+## <mark style="color:red;">**Parameters**</mark>
 
-    Arjun
+### extract PHP file
 
-    ```bash
-    arjun -i php.txt >> param.txt
-    ```
+```bash
+cat allurls.txt | grep -E "\\.php" >> php.txt
+```
 
-    paramspider
+### Arjun
 
-    ```bash
-    paramspider -l php.txt >> param.txt
-    ```
+```bash
+arjun -i php.txt >> param.txt
+```
 
-    unique
+### paramspider
 
-    ```bash
-    cat param.txt | anew >> uniparam.txt
-    ```
+```bash
+paramspider -l php.txt >> param.txt
+```
+
+### unique
+
+```bash
+cat param.txt | anew >> uniparam.txt
+```
 
 
-* <mark style="color:red;">**OSINT Framework**</mark>
-* <mark style="color:red;">**Shodan**</mark>
-*   <mark style="color:red;">**Crunch base**</mark>
 
-    information about target like Acquisition, contact info ,emails, etc...
-*   <mark style="color:red;">**Whois**</mark>
+## <mark style="color:red;">**OSINT Framework**</mark>
 
-    information about target may use in subdomain takeover
-*   <mark style="color:red;">**403/unauthorized**</mark>
+## <mark style="color:red;">**Shodan**</mark>
 
-    bypass it by `~/403bypass]`
+## <mark style="color:red;">**Crunch base**</mark>
+
+information about target like Acquisition, contact info ,emails, etc...
+
+## <mark style="color:red;">**Whois**</mark>
+
+information about target may use in subdomain takeover
+
+## <mark style="color:red;">**403/unauthorized**</mark>
+
+bypass it by `~/403bypass]`
