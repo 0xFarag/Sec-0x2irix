@@ -89,7 +89,7 @@ env
 
 ***
 
-#### <mark style="color:purple;">**Processes**</mark>
+## <mark style="color:purple;">**Processes**</mark>
 
 **Enumerate all processes in a user readable format.**
 
@@ -107,7 +107,7 @@ It also possible to monitor running processes at live time using [pspy](https://
 
 ***
 
-#### <mark style="color:purple;">Network</mark>
+## <mark style="color:purple;">Network</mark>
 
 Enumerate all network interfaces, this includes physical and virtual networks.
 
@@ -143,7 +143,7 @@ cat /etc/iptables/rules.v4
 
 ***
 
-#### <mark style="color:purple;">Installed Software</mark>
+## <mark style="color:purple;">Installed Software</mark>
 
 ```bash
 dpkg -l
@@ -151,13 +151,13 @@ dpkg -l
 
 ***
 
-#### <mark style="color:purple;">SSH Keys & History</mark>
+## <mark style="color:purple;">SSH Keys & History</mark>
 
 Check `~/.ssh/`, `.bash_history`, configs (`.gitconfig`, `config.json`, etc.)
 
 ***
 
-#### <mark style="color:purple;">SUID/SGID Binaries:</mark>
+## <mark style="color:purple;">SUID/SGID Binaries:</mark>
 
 ```bash
 find / -perm -4000 2>/dev/null
@@ -165,7 +165,7 @@ find / -perm -4000 2>/dev/null
 
 ***
 
-#### <mark style="color:purple;">Writable Directories</mark>
+## <mark style="color:purple;">Writable Directories</mark>
 
 ```bash
 find / -path /proc -prune -o -type d -perm -o+w 2>/dev/null

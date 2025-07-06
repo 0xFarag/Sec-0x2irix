@@ -1,4 +1,4 @@
-# sheet cheat
+# Sheet cheat
 
 Requirements: Linux Users Essentials , Linux File System , Linux Permissions
 
@@ -302,7 +302,7 @@ Technique taht you add a new path that system search for executables in it
 
 #### **3- Un reset environment Variables Leads to Load Mlaicious Libraries**
 
-\[A] **LD\_PRELOAD**
+## \[A] **LD\_PRELOAD**
 
 *   **Check Line**
 
@@ -342,7 +342,7 @@ Technique taht you add a new path that system search for executables in it
     cd /tmpgcc -fPIC -shared -o [pe.so](http://pe.so/) pe.c -nostartfilessudo LD_PRELOAD=Malicious_lib.so <COMMAND> #Use any command you can run with sudo
     ```
 
-**\[B] LD\_LIBRARY\_PATH \[Shared Library Hijacking]**
+## **\[B] LD\_LIBRARY\_PATH \[Shared Library Hijacking]**
 
 *   **Check Line**
 

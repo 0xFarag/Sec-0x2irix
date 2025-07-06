@@ -1,6 +1,6 @@
 # Checklist
 
-* **users**
+* [ ] **users**
   * \[ ] `cat /etc/passwd`
   * \[ ] `cat /etc/shadow`
   * \[ ] `cat /etc/group`
@@ -8,36 +8,36 @@
   * \[ ] scheduled task `cat /etc/crontab`
   * \[ ] display `history`
   * \[ ] display `/tmp , /var/tmp`
-* **system**
+* [ ] **system**
   * \[ ] `hostname`
   * \[ ] enumerate OS version `cat /etc/os-release`
   * \[ ] kernel version `uname -a`
   * \[ ]
-* **user configuration**
+* [ ] **user configuration**
   * \[ ] shell escaping `sudo -l`
   * \[ ] environment variable `env`
   * \[ ]
-* **process**
+* [ ] **process**
   * \[ ] process running `ps aux`
   * \[ ] monitor process`watch -n 1 "ps -aux | grep pass"`
-* **Network**
+* [ ] **Network**
   * \[ ] disable routing table `route`
   * \[ ] Lists devices the server communicates with.`arp -a`
   * \[ ] enumerate connection `ss -anp`
-* **packed installed**
+* [ ] **packed installed**
   * \[ ] `dpkg -l`
-* **SUID/SGID**
+* [ ] **SUID/SGID**
   * \[ ] `find / -type f -perm -4000 -ls 2>/dev/null`
-* **writable directories**
+* [ ] **writable directories**
   * \[ ] `find / -path /proc -prune -o -type d -perm -o+w 2>/dev/null`
-* **system capability**
+* [ ] **system capability**
   * \[ ] `getcap -r / **2**>/dev/null`
-* **hidden**
+* [ ] **hidden**
   * \[ ] `find / -type f -name ".*"` \*\*\*\*Finds hidden files
   * \[ ] `find / -type d -name ".*"` Finds hidden directories
-* **version**
+* [ ] **version**
   * \[ ] search for any package version `ls /usr/bin | grep python`
-* **Credential**
+* [ ] **Credential**
   *   \[ ] Find Config Files
 
       `find / -type f \\( -iname "*.conf" -o -iname "*.config" -o -iname "*.xml" -o -iname "*.ini" -o -iname "*.env" \\) 2>/dev/null`
