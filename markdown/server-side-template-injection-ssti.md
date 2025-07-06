@@ -5,25 +5,29 @@ coverY: 0
 
 # Server-side template injection \[SSTI]
 
-#### **Server-side template injection :**
+## **Server-side template injection :**
 
 occurs when user-controlled input is embedded into a server-side template, allowing users to inject template directives. This allows an attacker to inject malicious template directives and possibly execute arbitrary code on the affected server.
 
-**Template engines** : are designed to generate web pages by combining fixed templates with volatile data.
+### **Template engines** :
 
-**How can SSTI occur ? →** when user input is concatenated directly into a template rather than passed in as data
+&#x20;are designed to generate web pages by combining fixed templates with volatile data.
+
+### **How can SSTI occur ?**&#x20;
+
+&#x20;when user input is concatenated directly into a template rather than passed in as data
 
 ***
 
 ***
 
-#### What is the IMPACT ?
+## What is the IMPACT ?
 
 attacker can potentially achieve remote code execution (<mark style="color:red;">`RCE`</mark>), taking full control of the back-end server and using it to perform other attacks on internal infrastructure.
 
 Even in cases where full remote code execution is not possible : attacker can use SSTI to read a sensitive data and files.
 
-#### Is vulnerable or Not?
+### Is vulnerable or Not?
 
 ```php
 $output = $twig->render("Dear {first_name},", array("first_name" => $user.first_name) );
@@ -48,11 +52,11 @@ Vulnerabilities like this are sometimes caused by accident due to poor template 
 
 ***
 
-#### **Constructing SSTI Attack**
+## **Constructing SSTI Attack**
 
 <figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-#### **Detection Steps**
+## **Detection Steps**
 
 * Identify the application’s built-in language and the running template engine by `wrong message` , `payloads` , etc.
 * Identify injectable user-controlled inputs in GET and POST requests.
@@ -65,7 +69,7 @@ Most template languages allow you to freely input content either by using `HTML 
 
 ***
 
-#### Exploit :
+## Exploit :
 
 ```python
 {{''.__class__.__mro__[1].__subclasses__()[278]("id",shell=True,stdout=-1).communicate()}}
@@ -97,7 +101,7 @@ Ruby -> Liquid
 
 ***
 
-#### Methodology :
+## Methodology :
 
 1- user input reflection
 
@@ -107,7 +111,7 @@ Ruby -> Liquid
 
 <figure><img src="../.gitbook/assets/serverside.png" alt=""><figcaption></figcaption></figure>
 
-#### Some Payloads For Test:
+## Some Payloads For Test:
 
 <figure><img src="../.gitbook/assets/EnwZh7qXcAEB3wu.jpeg" alt=""><figcaption></figcaption></figure>
 
@@ -117,9 +121,9 @@ LINK: [https://x.com/jae\_hak99/status/1331967876417327104](https://x.com/jae_ha
 
 ***
 
-#### Automation
+## Automation
 
-TPLMAP tool:
+### TPLMAP tool:
 
 ```python
 # installation
@@ -138,7 +142,7 @@ python3 tplmap.py –os-shell -u ‘<http://www.target.com/page.php?id=1*’>
 
 ***
 
-#### Some Notes
+## Some Notes
 
 ```python
 // Node js payload not reflect value ${7*7} = ${7*7}
@@ -162,13 +166,15 @@ Link : [https://hackerone.com/reports/399462](https://hackerone.com/reports/3994
 
 ***
 
-#### **Mitigation**
+## **Mitigation**
 
 * Sanitize user inputs before passing them into the templates.
 * Sandboxing: execute user’s code in a sandboxed environment; though some of these environments can be bypassed, they are still considered a protection mechanism to reduce the risk of the SSTI vulnerability.
 
 ***
 
-<mark style="color:red;">**Notion link**</mark> : [https://wise-monitor-956.notion.site/SSTI-6f295eee2f97481ab821b6b5d348b53f](https://wise-monitor-956.notion.site/SSTI-6f295eee2f97481ab821b6b5d348b53f)
+## <mark style="color:red;">**Notion link**</mark>&#x20;
+
+&#x20;[https://wise-monitor-956.notion.site/SSTI-6f295eee2f97481ab821b6b5d348b53f](https://wise-monitor-956.notion.site/SSTI-6f295eee2f97481ab821b6b5d348b53f)
 
 ***
