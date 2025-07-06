@@ -5,7 +5,7 @@ coverY: 0
 
 # HTTP Host header attacks
 
-**What’s the HTTP Host Header?**
+## **What’s the HTTP Host Header?**
 
 The **HTTP Host header** is a crucial part of HTTP requests, particularly in HTTP/1.1. It specifies the domain name of the server to which the client (e.g., a web browser) is trying to connect. This header is essential because it allows multiple websites (or domains) to be hosted on the same IP address, a feature known as **virtual hosting**.
 
@@ -22,13 +22,13 @@ Host header altered when the request has been forwarded by an intermediary syste
 
 ***
 
-**What is the purpose of the HTTP Host header?**
+## **What is the purpose of the HTTP Host header?**
 
 help identify which back-end component the client wants to communicate with it. • **Virtual Hosting**: When multiple websites share the same IP address, the server uses the `Host` header to determine which website the client is requesting. • **Routing Requests**: The server uses the `Host` header to route the request to the correct website or [application.in](http://application.in) cases where clients access the website via a content delivery network (CDN).
 
 ***
 
-**How does the HTTP Host header solve this problem?**
+## **How does the HTTP Host header solve this problem?**
 
 When a browser sends the request, the target URL will resolve to the IP address of a particular server. When this server receives the request, it refers to the Host header to determine the intended back-end and forwards the request accordingly.
 
@@ -38,7 +38,7 @@ When a browser sends the request, the target URL will resolve to the IP address 
 <a href="https://_SERVER['HOST']/support">Contact support</a>
 ```
 
-**Vulnerability can be occur**
+## **Vulnerability can be occur**
 
 * Web cache poisoning
 * Business logic flaws in specific functionality
@@ -47,13 +47,15 @@ When a browser sends the request, the target URL will resolve to the IP address 
 
 ***
 
-**Exploiting HTTP Host header vulnerabilities**
+## **Exploiting HTTP Host header vulnerabilities**
 
-[Labs](password-reset-poisoning-via-dangling-markup.md)
+{% content-ref url="password-reset-poisoning-via-dangling-markup.md" %}
+[password-reset-poisoning-via-dangling-markup.md](password-reset-poisoning-via-dangling-markup.md)
+{% endcontent-ref %}
 
 ***
 
-**How to prevent HTTP Host header attacks**
+## **How to prevent HTTP Host header attacks**
 
 *   **Avoid using the Host header** in server-side code whenever possible. Use relative URLs instead to prevent web cache poisoning.
 
@@ -133,7 +135,7 @@ $resetPasswordURL = "https://{$_SERVER['HTTP_HOST']}/reset.php?token=$token";
 
 ***
 
-<mark style="color:red;">**Check list**</mark>
+## <mark style="color:red;">**Check list**</mark>
 
 Add line wrapping
 

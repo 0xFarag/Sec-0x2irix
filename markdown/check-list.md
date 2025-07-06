@@ -1,154 +1,180 @@
 # Check list
 
-* **Recon Phase**
-  * \[ ] Identify web server, technologies and database
-  * \[ ] Subsidiary and Acquisition Enumeration
-  * \[ ] Reverse Lookup
-  * \[ ] ASN & IP Space Enumeration and Service Enumeration
-  * \[ ] Google Dorking (Google Hacking Database)
-  * \[ ] whois (for each subdomain)
-  * \[ ] Wayback History
-  * \[ ] pdf (foca tool)
-  * \[ ] Github Recon
-  * \[ ] OSINT Framework - Maltego
-  * \[ ] Directory Enumeration
-  * \[ ] IP Range Enumeration
-  * \[ ] JS Files Analysis
-  * \[ ] Subdomain Enumeration and Bruteforcing
-  * \[ ] Subdomain Takeover
-  * \[ ] Parameter Fuzzing
-  * \[ ] test Hidden parameter in `login, search, file upload/download`
-  * \[ ] Port Scanning
-  * \[ ] Template-Based Scanning(Nuclei)
-  * \[ ] Broken Link Hijacking
-  * \[ ] Internet Search Engine Discovery
-  * \[ ] Misconfigured Cloud Storage
-*   **Registration Feature Testing**
+## **Recon Phase**
 
-    * \[ ] Check for duplicate registration/Overwrite existing user
-    * \[ ] Check for weak password policy
-    * \[ ] Check for reuse existing usernames
-    * \[ ] Check for insufficient email verification process
-    * \[ ] Weak registration implementation-Allows disposable email addresses
-    * \[ ] Weak registration implementation-Over HTTP
-    * \[ ] check for rate limit in registration form (create large account [test+100@bugcrwoed.com](mailto:test+100@bugcrwoed.com))
-    * \[ ] Overwrite default web application pages by specially crafted username registrations. => After registration, does your profile link appears something as [www.tushar.com/](http://www.chintan.com/chintan)tushar?
+* \[ ] Identify web server, technologies and database
+* \[ ] Subsidiary and Acquisition Enumeration
+* \[ ] Reverse Lookup
+* \[ ] ASN & IP Space Enumeration and Service Enumeration
+* \[ ] Google Dorking (Google Hacking Database)
+* \[ ] whois (for each subdomain)
+* \[ ] Wayback History
+* \[ ] pdf (foca tool)
+* \[ ] Github Recon
+* \[ ] OSINT Framework - Maltego
+* \[ ] Directory Enumeration
+* \[ ] IP Range Enumeration
+* \[ ] JS Files Analysis
+* \[ ] Subdomain Enumeration and Bruteforcing
+* \[ ] Subdomain Takeover
+* \[ ] Parameter Fuzzing
+* \[ ] test Hidden parameter in `login, search, file upload/download`
+* \[ ] Port Scanning
+* \[ ] Template-Based Scanning(Nuclei)
+* \[ ] Broken Link Hijacking
+* \[ ] Internet Search Engine Discovery
+* \[ ] Misconfigured Cloud Storage
 
-    a. If so, enumerate default folders of web application such as /images, /contact, /portfolio
+## **Registration Feature Testing**
 
-    b. Do a registration using the username such as images, contact, portfolio
+* \[ ] Check for duplicate registration/Overwrite existing user
+* \[ ] Check for weak password policy
+* \[ ] Check for reuse existing usernames
+* \[ ] Check for insufficient email verification process
+* \[ ] Weak registration implementation-Allows disposable email addresses
+* \[ ] Weak registration implementation-Over HTTP
+* \[ ] check for rate limit in registration form (create large account [test+100@bugcrwoed.com](mailto:test+100@bugcrwoed.com))
+* \[ ] Overwrite default web application pages by specially crafted username registrations. => After registration, does your profile link appears something as [www.tushar.com/](http://www.chintan.com/chintan)tushar?
 
-    c. Check if those default folders have been overwritten by your profile link or not."
-* **Session Management Testing**
-  * \[ ] Identify actual session cookie out of bulk cookies in the application
-  * \[ ] Decode cookies using some standard decoding algorithms such as Base64, hex, URL, etc
-  * \[ ] Modify cookie.session token value by 1 bit/byte. Then resubmit and do the same for all tokens. Reduce the amount of work you need to perform in order to identify which part of the token is actually being used and which is not
-  * \[ ] If self-registration is available and you can choose your username, log in with a series of similar usernames containing small variations between them, such as A, AA, AAA, AAAA, AAAB, AAAC, AABA, and so on. If another user-specific data is submitted at login or stored in user profiles (such as an email address)
-  * \[ ] Check for session cookies and cookie expiration date/time
-  * \[ ] Identify cookie domain scope
-  * \[ ] Check for HttpOnly flag in cookie
-  * \[ ] Check for Secure flag in cookie if the application is over SSL
-  * \[ ] Check for session fixation i.e. value of session cookie before and after authentication
-  * \[ ] Replay the session cookie from a different effective IP address or system to check whether the server maintains the state of the machine or not
-  * \[ ] Check for concurrent login through different machine/IP
-  * \[ ] Check if any user pertaining information is stored in cookie value or not If yes, tamper it with other user's data
-  * \[ ] Failure to Invalidate Session on (Email Change,2FA Activation)
-* **Authentication Testing**
-  * \[ ] Username enumeration
-  * \[ ] Bypass authentication using various SQL Injections on username and password field
-  * Lack of password confirmation on
-    * \[ ] Change email address
-    * \[ ] Change password
-    * \[ ] Manage 2FA
-  * \[ ] Is it possible to use resources without authentication? Access violation
-  * \[ ] Check if user credentials are transmitted over SSL or not
-  * \[ ] Weak login function HTTP and HTTPS both are available
-  *   Test user account lockout mechanism on brute force attack
+a. If so, enumerate default folders of web application such as /images, /contact, /portfolio
 
-      Variation : If server blocks instant user requests, then try with time throttle option from intruder and repeat the process again.
+b. Do a registration using the username such as images, contact, portfolio
 
-      * \[ ] Bypass rate limiting by tampering user agent to Mobile User agent
-      * \[ ] Bypass rate limiting by tampering user agent to Anonymous user agent
-      * \[ ] Bypass rate limiting by using null byte
-      * \[ ] Bypass rate limiting by change name or last char from small to capital
-  * \[ ] Create a password wordlist using crawl command
-  * \[ ] check if the way of authentication is fixed
-  * \[ ] check if the server check the case sensitive
-  * \[ ] try add space after username
-  * Test Oauth login functionality
-    * OAuth Roles
-      * \[ ] Resource Owner → User
-      * \[ ] Resource Server → Twitter
-      * \[ ] Client Application → [Twitterdeck.com](http://twitterdeck.com/)
-      * \[ ] Authorization Server → Twitter
-      * \[ ] client\_id → Twitterdeck ID (This is a public, non-secret unique identifier\_
-      * \[ ] client\_secret → Secret Token known to the Twitter and Twitterdeck to generate access\_tokens
-      * \[ ] response\_type → Defines the token type e.g (code, token, etc.)
-      * \[ ] scope → The requested level of access Twitterdeck wants
-      * \[ ] redirect\_uri → The URL user is redirected to after the authorization is complete
-      * \[ ] state → Main CSRF protection in OAuth can persist data between the user being directed to the authorization server and back again
-      * \[ ] grant\_type → Defines the grant\_type and the returned token type
-      * \[ ] code → The authorization code twitter generated, will be like ?code= , the code is used with client\_id and client\_secret to fetch an access\_token
-      * \[ ] access\_token → The token twitterdeck uses to make API requests on behalf of the user
-      * \[ ] refresh\_token → Allows an application to obtain a new access\_token without prompting the user
-    * Code Flaws
-      * \[ ] Re-Using the code
-      * \[ ] Code Predict/Bruteforce and Rate-limit
-      * \[ ] Is the code for application X valid for application Y?
-    * Redirect\_uri Flaws
-      * \[ ] URL isn't validated at all: ?redirect\_uri=https://attacker.com
-      * \[ ] Subdomains allowed (Subdomain Takeover or Open redirect on those subdomains): ?redirect\_uri=https://sub.twitterdeck.com
-      * \[ ] Host is validated, path isn't Chain open redirect): ?redirect\_uri=https://twitterdeck.com/callback?redirectUrl=https://evil.com
-      * \[ ] Host is validated, path isn't (Referer leakages): Include external content on HTML page and leak code via Referer
-      * \[ ] Weak Regexes
-      * \[ ] Bruteforcing the URL encoded chars after host: redirect\_uri=https://twitterdeck.com§FUZZ§
-      * \[ ] Bruteforcing the keywords whitelist after host (or on any whitelist open redirect filter): ?redirect\_uri=https://§FUZZ§.com
-      * \[ ] URI validation in place: use typical open redirect payloads
-    * State Flaws
-      * \[ ] Missing State parameter? (CSRF)
-      * \[ ] Predictable State parameter?
-      * \[ ] Is State parameter being verified?
-    * Misc
-      * \[ ] Is client\_secret validated?
-      * \[ ] Pre ATO using facebook phone-number signup
-      * \[ ] No email validation Pre ATO
-  * Test 2FA Misconfiguration
-    * \[ ] Response Manipulation
-    * \[ ] Status Code
-    * \[ ] Manipulation
-    * \[ ] 2FA Code Leakage in Response
-    * \[ ] 2FA Code Reusability
-    * \[ ] Lack of Brute-Force Protection
-    * \[ ] Missing 2FA Code Integrity Validation
-    * \[ ] With null or 000000
-* **My Account (Post Login) Testing**
-  * \[ ] Find parameter which uses active account user id. Try to tamper it in order to change the details of the other accounts
-  * \[ ] Create a list of features that are pertaining to a user account only. Change Email Change Password -Change account details (Name, Number, Address, etc.) Try CSRF
-  * \[ ] Post login change email id and update with any existing email id. Check if its getting validated on server side or not. Does the application send any new email confirmation link to a new user or not? What if a user does not confirm the link in some time frame?
-  * \[ ] Open profile picture in a new tab and check the URL. Find email id/user id info. EXIF Geolocation Data Not Stripped From Uploaded Images.
-  * \[ ] Check account deletion option if application provides it and confirm that via forgot password feature
-  * \[ ] Change email id, account id, user id parameter and try to brute force other user's password
-  * \[ ] Check whether application re authenticates for performing sensitive operation for post authentication features
-* **Forgot Password Testing**
-  * \[ ] Failure to invalidate session on Logout and Password reset
-  * \[ ] Check if forget password reset link/code uniqueness
-  * \[ ] Check if reset link does get expire or not if its not used by the user for certain amount of time
-  * \[ ] Find user account identification parameter and tamper Id or parameter value to change other user's password
-  * \[ ] Check for weak password policy
-  * \[ ] Weak password reset implementation Token is not invalidated after use
-  * \[ ] If reset link has another param such as date and time, then. Change date and time value in order to make active & valid reset link
-  * \[ ] Check if security questions are asked? How many guesses allowed? --> Lockout policy maintained or not?
-  * \[ ] Add only spaces in new password and confirmed password. Then Hit enter and see the result
-  * \[ ] Does it display old password on the same page after completion of forget password formality?
-  * \[ ] Ask for two password reset link and use the older one from user's email
-  * \[ ] Check if active session gets destroyed upon changing the password or not?
-  * \[ ] Weak password reset implementation Password reset token sent over HTTP
-  * \[ ] Send continuous forget password requests so that it may send sequential tokens
-* **Contact Us Form Testing**
-  * \[ ] Is CAPTCHA implemented on contact us form in order to restrict email flooding attacks?
-  * \[ ] Does it allow to upload file on the server?
-  * \[ ] Blind XSS
-* **Product Purchase Testing**
+c. Check if those default folders have been overwritten by your profile link or not."
+
+## **Session Management Testing**
+
+* \[ ] Identify actual session cookie out of bulk cookies in the application
+* \[ ] Decode cookies using some standard decoding algorithms such as Base64, hex, URL, etc
+* \[ ] Modify cookie.session token value by 1 bit/byte. Then resubmit and do the same for all tokens. Reduce the amount of work you need to perform in order to identify which part of the token is actually being used and which is not
+* \[ ] If self-registration is available and you can choose your username, log in with a series of similar usernames containing small variations between them, such as A, AA, AAA, AAAA, AAAB, AAAC, AABA, and so on. If another user-specific data is submitted at login or stored in user profiles (such as an email address)
+* \[ ] Check for session cookies and cookie expiration date/time
+* \[ ] Identify cookie domain scope
+* \[ ] Check for HttpOnly flag in cookie
+* \[ ] Check for Secure flag in cookie if the application is over SSL
+* \[ ] Check for session fixation i.e. value of session cookie before and after authentication
+* \[ ] Replay the session cookie from a different effective IP address or system to check whether the server maintains the state of the machine or not
+* \[ ] Check for concurrent login through different machine/IP
+* \[ ] Check if any user pertaining information is stored in cookie value or not If yes, tamper it with other user's data
+* \[ ] Failure to Invalidate Session on (Email Change,2FA Activation)
+
+## **Authentication Testing**
+
+* \[ ] Username enumeration
+* \[ ] Bypass authentication using various SQL Injections on username and password field
+* Lack of password confirmation on
+  * \[ ] Change email address
+  * \[ ] Change password
+  * \[ ] Manage 2FA
+* \[ ] Is it possible to use resources without authentication? Access violation
+* \[ ] Check if user credentials are transmitted over SSL or not
+* \[ ] Weak login function HTTP and HTTPS both are available
+*   Test user account lockout mechanism on brute force attack
+
+    Variation : If server blocks instant user requests, then try with time throttle option from intruder and repeat the process again.
+
+    * \[ ] Bypass rate limiting by tampering user agent to Mobile User agent
+    * \[ ] Bypass rate limiting by tampering user agent to Anonymous user agent
+    * \[ ] Bypass rate limiting by using null byte
+    * \[ ] Bypass rate limiting by change name or last char from small to capital
+* \[ ] Create a password wordlist using crawl command
+* \[ ] check if the way of authentication is fixed
+* \[ ] check if the server check the case sensitive
+* \[ ] try add space after username
+
+## Test Oauth login functionality
+
+### OAuth Roles
+
+* \[ ] Resource Owner → User
+* \[ ] Resource Server → Twitter
+* \[ ] Client Application → [Twitterdeck.com](http://twitterdeck.com/)
+* \[ ] Authorization Server → Twitter
+* \[ ] client\_id → Twitterdeck ID (This is a public, non-secret unique identifier\_
+* \[ ] client\_secret → Secret Token known to the Twitter and Twitterdeck to generate access\_tokens
+* \[ ] response\_type → Defines the token type e.g (code, token, etc.)
+* \[ ] scope → The requested level of access Twitterdeck wants
+* \[ ] redirect\_uri → The URL user is redirected to after the authorization is complete
+* \[ ] state → Main CSRF protection in OAuth can persist data between the user being directed to the authorization server and back again
+* \[ ] grant\_type → Defines the grant\_type and the returned token type
+* \[ ] code → The authorization code twitter generated, will be like ?code= , the code is used with client\_id and client\_secret to fetch an access\_token
+* \[ ] access\_token → The token twitterdeck uses to make API requests on behalf of the user
+* \[ ] refresh\_token → Allows an application to obtain a new access\_token without prompting the user
+
+### Code Flaws
+
+* \[ ] Re-Using the code
+* \[ ] Code Predict/Bruteforce and Rate-limit
+* \[ ] Is the code for application X valid for application Y?
+
+### Redirect\_uri Flaws
+
+* \[ ] URL isn't validated at all: ?redirect\_uri=https://attacker.com
+* \[ ] Subdomains allowed (Subdomain Takeover or Open redirect on those subdomains): ?redirect\_uri=https://sub.twitterdeck.com
+* \[ ] Host is validated, path isn't Chain open redirect): ?redirect\_uri=https://twitterdeck.com/callback?redirectUrl=https://evil.com
+* \[ ] Host is validated, path isn't (Referer leakages): Include external content on HTML page and leak code via Referer
+* \[ ] Weak Regexes
+* \[ ] Bruteforcing the URL encoded chars after host: redirect\_uri=https://twitterdeck.com§FUZZ§
+* \[ ] Bruteforcing the keywords whitelist after host (or on any whitelist open redirect filter): ?redirect\_uri=https://§FUZZ§.com
+* \[ ] URI validation in place: use typical open redirect payloads
+
+### State Flaws
+
+* \[ ] Missing State parameter? (CSRF)
+* \[ ] Predictable State parameter?
+* \[ ] Is State parameter being verified?
+
+### Misc
+
+* \[ ] Is client\_secret validated?
+* \[ ] Pre ATO using facebook phone-number signup
+* \[ ] No email validation Pre ATO
+
+### Test 2FA Misconfiguration
+
+* \[ ] Response Manipulation
+* \[ ] Status Code
+* \[ ] Manipulation
+* \[ ] 2FA Code Leakage in Response
+* \[ ] 2FA Code Reusability
+* \[ ] Lack of Brute-Force Protection
+* \[ ] Missing 2FA Code Integrity Validation
+* \[ ] With null or 000000
+
+## **My Account (Post Login) Testing**
+
+* \[ ] Find parameter which uses active account user id. Try to tamper it in order to change the details of the other accounts
+* \[ ] Create a list of features that are pertaining to a user account only. Change Email Change Password -Change account details (Name, Number, Address, etc.) Try CSRF
+* \[ ] Post login change email id and update with any existing email id. Check if its getting validated on server side or not. Does the application send any new email confirmation link to a new user or not? What if a user does not confirm the link in some time frame?
+* \[ ] Open profile picture in a new tab and check the URL. Find email id/user id info. EXIF Geolocation Data Not Stripped From Uploaded Images.
+* \[ ] Check account deletion option if application provides it and confirm that via forgot password feature
+* \[ ] Change email id, account id, user id parameter and try to brute force other user's password
+* \[ ] Check whether application re authenticates for performing sensitive operation for post authentication features
+
+## **Forgot Password Testing**
+
+* \[ ] Failure to invalidate session on Logout and Password reset
+* \[ ] Check if forget password reset link/code uniqueness
+* \[ ] Check if reset link does get expire or not if its not used by the user for certain amount of time
+* \[ ] Find user account identification parameter and tamper Id or parameter value to change other user's password
+* \[ ] Check for weak password policy
+* \[ ] Weak password reset implementation Token is not invalidated after use
+* \[ ] If reset link has another param such as date and time, then. Change date and time value in order to make active & valid reset link
+* \[ ] Check if security questions are asked? How many guesses allowed? --> Lockout policy maintained or not?
+* \[ ] Add only spaces in new password and confirmed password. Then Hit enter and see the result
+* \[ ] Does it display old password on the same page after completion of forget password formality?
+* \[ ] Ask for two password reset link and use the older one from user's email
+* \[ ] Check if active session gets destroyed upon changing the password or not?
+* \[ ] Weak password reset implementation Password reset token sent over HTTP
+* \[ ] Send continuous forget password requests so that it may send sequential tokens
+
+## **Contact Us Form Testing**
+
+* \[ ] Is CAPTCHA implemented on contact us form in order to restrict email flooding attacks?
+* \[ ] Does it allow to upload file on the server?
+* \[ ] Blind XSS
+
+- **Product Purchase Testing**
   * Buy Now
     * \[ ] Tamper product ID to purchase other high valued product with low prize
     * \[ ] Tamper product data in order to increase the number of product with the same prize
@@ -183,7 +209,7 @@
     * \[ ] Check if user A can modify the shipping address of placed order by user B
   * Out of band testing
     * \[ ] Can user order product which is out of stock?
-* **Banking Application Testing**
+- **Banking Application Testing**
   * Billing Activity
     * \[ ] Check if user 'A' can view the account statement for user 'B'
     * \[ ] Check if user 'A' can view the transaction report for user 'B'
@@ -223,7 +249,7 @@
     * \[ ] Check if user can register payee without any checker approval
     * \[ ] Check if user 'A' can view the pending payments of user 'B'
     * \[ ] Check if user 'A' can view the payment made details of user 'B'
-* **Open Redirection Testing**
+- **Open Redirection Testing**
   *   Common injection parameters
 
       ```markup
@@ -264,7 +290,7 @@
   * \[ ] Using \\/\\/ to bypass // blacklisted keyword
   * \[ ] Using null byte %00 to bypass blacklist filter
   * \[ ] Using ° symbol to bypass
-* **Host Header Injection**
+- **Host Header Injection**
   * \[ ] try add **`.`** after hostname
   * \[ ] try to edit version number in burp
   * \[ ] Supply an arbitrary Host header
@@ -297,7 +323,7 @@
   * \[ ] Virtual host brute-forcing
   * \[ ] [Routing-based SSRF](https://portswigger.net/web-security/host-header/exploiting#routing-based-ssrf)
   * \[ ] [Connection state attacks](https://portswigger.net/web-security/host-header/exploiting#connection-state-attacks)
-* **SQL Injection Testing**
+- **SQL Injection Testing**
   * Entry point detection
     * \[ ] Simple characters
     * \[ ] Multiple encoding
@@ -333,7 +359,7 @@
             
             MySQL 	      SELECT IF(YOUR-CONDITION-HERE,sleep(10),'a')
       ```
-* **Cross-Site Scripting Testing(XSS)**
+- **Cross-Site Scripting Testing(XSS)**
   * \[ ] if `HttpOnly` is **true** don’t test for this bug
   * \[ ] Try XSS using QuickXSS tool by theinfosecguy
   * \[ ] Upload file using '">\<img src=x onerror=alert(document.domain)>.txt
@@ -357,7 +383,7 @@
     * \[ ] Injecting anchor tag without whitespaces
     * \[ ] Try to bypass whitespaces using Bullet
     * \[ ] Try to change request method
-* **CSRF Testing**
+- **CSRF Testing**
   * \[ ] if cookie settings have `SameSite` don’t test for this bug
   * Application has Anti-CSRF token implemented
     * \[ ] Removing the Anti-CSRF Token
@@ -382,7 +408,7 @@
     * \[ ] SameSite Strict bypass via client-side redirect
     * \[ ] SameSite Strict bypass via sibling domain
     * \[ ] SameSite Lax bypass via cookie refresh
-* **SSO Vulnerabilities**
+- **SSO Vulnerabilities**
   * \[ ] If [internal.company.com](http://internal.company.com) Redirects You To SSO e.g. [auth.company.com](http://auth.company.com), Do FUZZ On [Internal.company.com](http://internal.company.com)
   * \[ ] If [company.com/internal](http://company.com/internal) Redirects You To SSO e.g. Google login, Try To Insert public Before internal e.g. [company.com/public/internal](http://company.com/public/internal) To Gain Access Internal
   * \[ ] Try To Craft SAML Request With Token And Send It To The Server And Figure Out How Server Interact With This
@@ -395,7 +421,7 @@
   * \[ ] Try To Inject XSLT Payloads Into The Transforms Element As A Child Node Of The SAML Response
   * \[ ] If Victim Can Accept Tokens Issued By The Same Identity Provider That Services Attacker, So You Can Takeover Victim Account
   * \[ ] While Testing SSO Try To search In Burp Suite About URLs In Cookie Header e.g. Host=IP; If There Is Try To Change IP To Your IP To Get SSRF
-*   **XML Injection Testing**
+-   **XML Injection Testing**
 
     * \[ ] Change the content type to text/xml then insert below code. Check via repeater
 
@@ -410,11 +436,11 @@
     ```
 
     * \[ ] Blind XXE with out-of-band interaction
-* **Cross-origin resource sharing (CORS)**
+- **Cross-origin resource sharing (CORS)**
   * \[ ] if cookie settings have `SameSite` don’t test for this bug
   * \[ ] Errors parsing Origin headers
   * \[ ] Whitelisted null origin value
-* **Server-side request forgery (SSRF)**
+- **Server-side request forgery (SSRF)**
   *   Common injection parameters
 
       ```markup
@@ -542,7 +568,7 @@
         <http://169.254.169.254/metadata/instance/network/interface/0/ipv4/ipAddress/0/publicIpAddress?api-version=2017-04-02&format=text>
         ```
   * \[ ] Bypassing via open redirection
-* **File Upload Testing**
+- **File Upload Testing**
   * \[ ] upload the malicious file to the archive upload functionality and observe how the application responds
   * \[ ] upload a file and change its path to overwrite an existing system file
   * \[ ] Large File Denial of Service
@@ -556,7 +582,7 @@
     * \[ ] Client-Side Validation Bypass
     * \[ ] Blacklisted Extension Bypass
     * \[ ] Homographic Character Bypass
-* **CAPTCHA Testing**
+- **CAPTCHA Testing**
   * \[ ] Missing Captcha Field Integrity Checks
   * \[ ] HTTP Verb Manipulation
   * \[ ] Content Type Conversion
@@ -564,23 +590,23 @@
   * \[ ] Check if captcha is retrievable with the absolute path such as [www.tushar.com/internal/captcha/images/24.png](http://www.chintan.com/internal/captcha/images/24.png)
   * \[ ] Check for the server side validation for CAPTCHA.Remove captcha block from GUI using firebug addon and submit request to the server
   * \[ ] Check if image recognition can be done with OCR tool?
-* **JWT Token Testing**
+- **JWT Token Testing**
   * \[ ] Brute-forcing secret keys
   * \[ ] Signing a new token with the “none” algorithm
   * \[ ] Changing the signing algorithm of the token (for fuzzing purposes)
   * \[ ] Signing the asymmetrically-signed token to its symmetric algorithm match (when you have the original public key)
-* **Websockets Testing**
+- **Websockets Testing**
   * \[ ] Intercepting and modifying WebSocket messages
   * \[ ] Websockets MITM attempts
   * \[ ] Testing secret header websocket
   * \[ ] Content stealing in websockets
   * \[ ] Token authentication testing in websockets
-* **GraphQL Vulnerabilities Testing**
+- **GraphQL Vulnerabilities Testing**
   * \[ ] Inconsistent Authorization Checks
   * \[ ] Missing Validation of Custom Scalars
   * \[ ] Failure to Appropriately Rate-limit
   * \[ ] Introspection Query Enabled/Disabled
-* **WordPress Common Vulnerabilities**
+- **WordPress Common Vulnerabilities**
   * \[ ] XSPA in wordpress
   * \[ ] Bruteforce in wp-login.php
   * \[ ] Information disclosure wordpress username
@@ -592,20 +618,20 @@
   * \[ ] CVE-2018-6389
   * \[ ] CVE-2021-24364
   * \[ ] WP-Cronjob DOS
-* **XPath Injection**
+- **XPath Injection**
   * \[ ] XPath injection to bypass authentication
   * \[ ] XPath injection to exfiltrate data
   * \[ ] Blind and Time-based XPath injections to exfiltrate data
-* **LDAP Injection**
+- **LDAP Injection**
   * \[ ] LDAP injection to bypass authentication
   * \[ ] LDAP injection to exfiltrate data
-* **Denial of Service**
+- **Denial of Service**
   * \[ ] Cookie bomb
   * \[ ] Pixel flood, using image with a huge pixels
   * \[ ] Frame flood, using GIF with a huge frame
   * \[ ] ReDoS (Regex DoS)
   * \[ ] CPDoS (Cache Poisoned Denial of Service)
-* **403 Bypass**
+- **403 Bypass**
   * \[ ] Using "X-Original-URL" header
   * \[ ] Appending **%2e** after the first slash
   * \[ ] Try add dot (.) slash (/) and semicolon (;) in the URL
@@ -613,7 +639,7 @@
   * \[ ] Try to uppercase the alphabet in the url
   * \[ ] Tool-[**bypass-403**](https://github.com/daffainfo/bypass-403)
   * \[ ] Burp Extension-[403 Bypasser](https://portswigger.net/bappstore/444407b96d9c4de0adb7aed89e826122)
-* **Other Test Cases (All Categories)**
+- **Other Test Cases (All Categories)**
   * Testing for Role authorization
     * \[ ] Check if normal user can access the resources of high privileged users?
     * \[ ] Forced browsing
@@ -643,7 +669,7 @@
   * Web Services Testing
     * \[ ] Test for directory traversal
     * \[ ] Web services documentation disclosure Enumeration of services, data types, input types boundaries and limits
-* **easy bug**
+- **easy bug**
   * \[ ] rate limit by change the last char for login to capital char
   * \[ ] change protocol from http to https or reverse (in 403)
   * \[ ] open your profile image in new tap and delete it in the last tap then refresh
@@ -652,7 +678,7 @@
   * \[ ] old session doesn’t expire after a password change
   * \[ ] the site use chat bot ([https://medium.com/@loyalonlytoday/finding-a-easy-bug-to-get-a-easy-f008b2b25f73](https://medium.com/@loyalonlytoday/finding-a-easy-bug-to-get-a-easy-f008b2b25f73))
   * \[ ]
-* **WordPress**
+- **WordPress**
   * \[ ] search for any login page for wordpress
   * \[ ] Enter some random credentials, such as `admin:password`
   * \[ ] Enter your username from `wp-json/wp/v2/users`

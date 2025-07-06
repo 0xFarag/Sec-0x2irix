@@ -1,5 +1,7 @@
 # Race Conditions
 
+## What's the Race Conditions?
+
 > send many request in the same second or more one operation occurs at the same time or requests concurrently without adequate safeguards
 
 Result of Race Condition : **`Collusion`** that causes unintended behavior in the application
@@ -21,7 +23,7 @@ send two request by race condition
 
 ***
 
-We can found this vulnerability in
+## We can found this vulnerability in
 
 1. gift-card or promo code , etc
 2. change email or anything like this

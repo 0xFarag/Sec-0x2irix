@@ -1,6 +1,10 @@
 # Cross-Site Request Forgery \[CSRF]
 
+## What's the CSRF?
+
 Cross-site request forgery (also known as CSRF) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. It allows an attacker to partly circumvent the same origin policy, which is designed to prevent different websites from interfering with each other.
+
+## How can occur?
 
 For a CSRF attack to be possible, three key conditions must be in place:
 
@@ -30,7 +34,7 @@ CSRF will be `login`, `logout`, `resetpass`, `change password,` `add-cart`, `lik
 
 ***
 
-#### bypass
+## bypass
 
 ```
 -Change Request Method [POST => GET]
@@ -72,7 +76,7 @@ CSRF will be `login`, `logout`, `resetpass`, `change password,` `add-cart`, `lik
 
 ***
 
-#### **Mitigation**
+## **Mitigation**
 
 * The `SameSite` attribute can be used to control whether and how cookies are submitted in cross-site requests. By setting the attribute on session cookies, an application can prevent the default browser behavior of automatically adding cookies to requests regardless of where they originate.
 * The `SameSite` attribute is added to the `Set-Cookie` response header when the server issues a cookie, and the attribute can be given two values, `Strict` or `Lax`. For example:

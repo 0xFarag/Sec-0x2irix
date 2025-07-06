@@ -1,14 +1,16 @@
 # information disclosure
 
+## What's the information disclosure?
+
 > information leakage, when website unintentionally for sensitive data
 
-#### **Example for sensitive data**
+## **Example for sensitive data**
 
 * Data about user such as username or financial information
 * Sensitive commercial or business data
 * Technical details or website infrastructure
 
-#### **Examples of information disclosure**
+## **Examples of information disclosure**
 
 Revealing the names of hidden directories (`robots.txt` , `/sitemap.xml`)
 
@@ -21,7 +23,7 @@ Revealing the names of hidden directories (`robots.txt` , `/sitemap.xml`)
 
 ***
 
-#### **How to test for information disclosure vulnerabilities**
+## **How to test for information disclosure vulnerabilities**
 
 1. Fuzzing
 2. Burp Scanner
