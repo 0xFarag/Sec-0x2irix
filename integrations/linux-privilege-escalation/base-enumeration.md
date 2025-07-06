@@ -33,7 +33,7 @@ unshadow /etc/passwd /etc/shadow
 
 ***
 
-#### <mark style="color:purple;">System</mark>
+## <mark style="color:purple;">System</mark>
 
 **Enumerate hostname.**
 
@@ -64,7 +64,7 @@ uname -a
 
 ***
 
-#### <mark style="color:purple;">**User configurations**</mark>
+## <mark style="color:purple;">**User configurations**</mark>
 
 **list `sudoer` capabilities of current user.**
 
