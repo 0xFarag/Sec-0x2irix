@@ -1,6 +1,6 @@
 # Base Enumeration
 
-#### <mark style="color:purple;">Users</mark>
+## <mark style="color:purple;">Users</mark>
 
 **Enumerate the current `user ID (UID`), `group ID (GID)`, and the groups the user belongs to.**
 
