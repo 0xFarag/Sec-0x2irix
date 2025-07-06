@@ -1,90 +1,92 @@
 # Reconnaissance
 
-*   <mark style="color:red;">**Subdomain enumeration**</mark>
+## <mark style="color:red;">**Subdomain enumeration**</mark>
 
-    Subfinder
+### Subfinder
 
-    ```bash
-    # List
-    subfinder -dL domains.txt -o subs.com 
-    # domain
-    subfinder -d test.com -o subs.com 
-    ```
+```bash
+# List
+subfinder -dL domains.txt -o subs.com 
+# domain
+subfinder -d test.com -o subs.com 
+```
 
-    Amass
+#### Amass
 
-    ```bash
-    # passive
-    └─$ amass enum --passive -norecursive -noalts -d example.com -o example.com.subs
+```bash
+# passive
+└─$ amass enum --passive -norecursive -noalts -d example.com -o example.com.subs
 
-    # Lsit 
-    └─$ amass enum --passive -norecursive -noalts -df domains.txt-o example.com.subs
+# Lsit 
+└─$ amass enum --passive -norecursive -noalts -df domains.txt-o example.com.subs
 
-    # active
-    └─$ amass enum  -src -ip -brute -min-for-recursive 2 -d example.com -o example.com.subs
-    ```
+# active
+└─$ amass enum  -src -ip -brute -min-for-recursive 2 -d example.com -o example.com.subs
+```
 
-    Assetfinder
+Assetfinder
 
-    ```bash
-    └─$ assetfinder [--subs-only] <domain>
-    ```
+```bash
+└─$ assetfinder [--subs-only] <domain>
+```
 
-    SubEnum
+SubEnum
 
-    ```bash
-    # Basic Usage
-    └─$ subenum -d target.com
+```bash
+# Basic Usage
+└─$ subenum -d target.com
 
-    #Agains List Of Domains
-    └─$ subenum -l domains.txt -r
-    ```
+#Agains List Of Domains
+└─$ subenum -l domains.txt -r
+```
 
-    TheHarvester
+TheHarvester
 
-    ```bash
-    └─$ theHarvester -d cisco.com -b all 
-    ```
+```bash
+└─$ theHarvester -d cisco.com -b all 
+```
 
-    CRT
+CRT
 
-    ```bash
-    # use to filter unique subdomain
-    curl -s <https://crt.sh/\\?q\\=inlanefreight.com\\&output\\=json> | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\\\n/,"\\n");}1;' | sort -u
-    ```
+```bash
+# use to filter unique subdomain
+curl -s <https://crt.sh/\\?q\\=inlanefreight.com\\&output\\=json> | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\\\n/,"\\n");}1;' | sort -u
+```
 
-    [https://securitytrails.com/app/account](https://securitytrails.com/app/account)
+[https://securitytrails.com/app/account](https://securitytrails.com/app/account)
 
-    [https://subdomainfinder.c99.nl/](https://subdomainfinder.c99.nl/)
+[https://subdomainfinder.c99.nl/](https://subdomainfinder.c99.nl/)
 
-    [https://shrewdeye.app/](https://shrewdeye.app/)
+[https://shrewdeye.app/](https://shrewdeye.app/)
 
-    google dorking
+google dorking
 
-    unique subdomain
+unique subdomain
 
-    ```bash
-    cat subdomains.txt | anew >> unique_subdomains.txt
-    ```
-*   <mark style="color:red;">**Subdomain Takeover**</mark>
+```bash
+cat subdomains.txt | anew >> unique_subdomains.txt
+```
 
-    Subzy
+## <mark style="color:red;">**Subdomain Takeover**</mark>
 
-    ```bash
-    subzy run --targets unique_subdomains.txt --vuln --hide_fails
-    ```
+### Subzy
 
-    dig
+```bash
+subzy run --targets unique_subdomains.txt --vuln --hide_fails
+```
 
-    ```bash
-    dig +noall +answer @8.8.8.8 target.com CNAME
-    ```
+dig
 
-    nslookup
+```bash
+dig +noall +answer @8.8.8.8 target.com CNAME
+```
 
-    ```bash
-    nslookup taget.com
-    ```
+nslookup
+
+```bash
+nslookup taget.com
+```
+
 *   <mark style="color:red;">**Live subdomain**</mark>
 
     Httpx all thing about targets
