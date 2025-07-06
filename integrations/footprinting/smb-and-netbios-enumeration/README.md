@@ -1,10 +1,10 @@
 # SMB & Netbios Enumeration
 
-#### **SMB (Server Message Block)**
+## **SMB (Server Message Block)**
 
 SMB is a network sharing protocol widely used for file, printer, and resource sharing in Windows networks. It allows users to access files on remote systems as if they were local.
 
-SMB Versions:
+### SMB Versions:
 
 * **SMB 1.0**: Early versions were prone to security issues and are now largely deprecated.
 * **SMB 2.0/2.1**: Introduced in Windows Vista/Server 2008, with improved security and performance.
@@ -22,13 +22,13 @@ SMB Versions:
 
 ***
 
-**Samba and CIFS Protocol Summary in English**
+## **Samba and CIFS Protocol Summary**&#x20;
 
-🔹 **What is Samba?**
+### &#x20;**What is Samba?**
 
 **Samba** is an **open-source SMB server** for **Linux and Unix**, allowing them to communicate with **Windows** systems over a network.
 
-🔹 **What is CIFS?**
+### **What is CIFS?**
 
 * **CIFS (Common Internet File System)** is an **older SMB version** developed by **Microsoft**.
 * It primarily works with **SMB 1**, whereas newer versions like **SMB 2 & SMB 3** offer better performance and security.
@@ -41,7 +41,7 @@ SMB Versions:
 sudo systemctl restart smbd
 ```
 
-**Exploring SMB Shares with `smbclient`**
+## **Exploring SMB Shares with `smbclient`**
 
 We can list available shares on an SMB server using a **Null Session** (anonymous access) with the following command:
 
@@ -79,7 +79,7 @@ smb: \\> !cat test.txt
 
 ***
 
-**Monitoring Samba Connections with `smbstatus`**
+## **Monitoring Samba Connections with `smbstatus`**
 
 The `smbstatus` command helps administrators track active connections on a Samba server. It provides details about:
 
@@ -100,13 +100,13 @@ PID     Username      Group        Machine             Protocol Version
 
 ***
 
-**Footprinting the service**
+## **Footprinting the service**
 
 ```bash
 sudo nmap 10.129.14.128 -sV -sC -p139,445
 ```
 
-**Why use `rpcclient` instead of Nmap?**
+### **Why use `rpcclient` instead of Nmap?**
 
 ```bash
 rpcclient -U "" ip_add
@@ -120,7 +120,7 @@ Nmap may not reveal enough SMB information. `rpcclient` is a powerful tool that 
 
 it depend on **RPC (Remote procedure call)**
 
-**🛠️ Key `rpcclient` commands:**
+### &#x20;**Key `rpcclient` commands:**
 
 | **Query**                 | **Description**                                                    |
 | ------------------------- | ------------------------------------------------------------------ |
@@ -132,7 +132,7 @@ it depend on **RPC (Remote procedure call)**
 | `enumdomusers`            | Enumerates all domain users.                                       |
 | `queryuser <RID>`         | Provides information about a specific user.                        |
 
-**Brute Forcing User RIDs**
+### **Brute Forcing User RIDs**
 
 ```bash
  for i in $(seq 500 1100);do rpcclient -N -U "" 10.129.14.128 -c "queryuser 0x$(printf '%x\\n' $i)" | grep "User Name\\|user_rid\\|group_rid" && echo "";done
@@ -159,13 +159,13 @@ pip3 install -r requirements.txt
 
 ***
 
-#### **SMB cheat sheet**
+## **SMB cheat sheet**
 
 <table data-header-hidden><thead><tr><th width="316"></th><th></th></tr></thead><tbody><tr><td><strong>Command</strong></td><td><strong>Description</strong></td></tr><tr><td><code>smbclient -N -L //&#x3C;FQDN/IP></code></td><td>Null session authentication on SMB.</td></tr><tr><td><code>smbclient //&#x3C;FQDN/IP>/&#x3C;share></code></td><td>Connect to a specific SMB share.</td></tr><tr><td><code>rpcclient -U "" &#x3C;FQDN/IP></code></td><td>Interaction with the target using RPC.</td></tr><tr><td><code>samrdump.py &#x3C;FQDN/IP></code></td><td>Username enumeration using Impacket scripts.</td></tr><tr><td><code>smbmap -H &#x3C;FQDN/IP></code></td><td>Enumerating SMB shares.</td></tr><tr><td><code>crackmapexec smb &#x3C;FQDN/IP> --shares -u '' -p ''</code></td><td>Enumerating SMB shares using null session authentication.</td></tr><tr><td><code>enum4linux-ng.py &#x3C;FQDN/IP> -A</code></td><td>SMB enumeration using enum4linux.</td></tr></tbody></table>
 
 ***
 
-**Quick Summary**
+## **Quick Summary**
 
 ✅ **Samba** allows Linux/Unix to communicate with Windows using **SMB/CIFS** for file and printer sharing.
 
@@ -179,7 +179,7 @@ pip3 install -r requirements.txt
 
 ***
 
-#### **NetBIOS (Network Basic Input/Output System)**
+## **NetBIOS (Network Basic Input/Output System)**
 
 NetBIOS is an API and set of network protocols for communication over local networks, allowing applications on different computers to find and interact with each other. NetBIOS offers three primary services:
 

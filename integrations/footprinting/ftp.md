@@ -5,7 +5,7 @@ FTP connection has **two channels**
 1. **Control Channel (Port 21):** For sending commands.
 2. **Data Channel (Port 20):** For transferring files
 
-### <mark style="color:red;">FTP vs TFTP</mark>&#x20;
+## <mark style="color:red;">FTP vs TFTP</mark>&#x20;
 
 * **FTP (File Transfer Protocol)**: Uses TCP (reliable), supports authentication, encryption, and advanced features like creating/deleting files. Best for secure, complex file transfers.
 * **TFTP (Trivial File Transfer Protocol)**: Uses UDP (faster, less reliable), no authentication or encryption, only transfers files. Best for simple, quick tasks like booting devices.
@@ -40,7 +40,7 @@ ftp> put testupload.txt
 | `pam_service_name=vsftpd`                            | This string is the name of the PAM service vsftpd will use.                                              |
 | `rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem` | The last three options specify the location of the RSA certificate to use for SSL encrypted connections. |
 
-<mark style="color:red;">**Restricting Users from Accessing FTP**</mark>
+## <mark style="color:red;">**Restricting Users from Accessing FTP**</mark>
 
 The file `/etc/ftpusers` is used to **block certain users** from logging into the FTP server.
 
@@ -64,7 +64,7 @@ try aggressive scan
 nmap -sV -A -p 21 10.0.2.4
 ```
 
-<mark style="color:red;">**FTP**</mark>
+## <mark style="color:red;">**FTP**</mark>
 
 | **Command**                                                 | **Description**                                                         |
 | ----------------------------------------------------------- | ----------------------------------------------------------------------- |

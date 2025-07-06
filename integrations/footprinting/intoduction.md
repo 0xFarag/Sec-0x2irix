@@ -1,8 +1,14 @@
 # Intoduction
 
-**Reconnaissance** is the initial, broad info-gathering phase (e.g., finding IPs or domains)
+## **Reconnaissance** Vs **Enumeration**&#x20;
 
-**Enumeration** is a deeper, active step to extract specific details (e.g., usernames or services) after reconnaissance.
+### **Reconnaissance**&#x20;
+
+is the initial, broad info-gathering phase (e.g., finding IPs or domains)
+
+**Enumeration**&#x20;
+
+is a deeper, active step to extract specific details (e.g., usernames or services) after reconnaissance.
 
 *   **Enumeration**
 
@@ -11,59 +17,63 @@
     Enumeration is an **iterative process**, meaning you continuously gather more information based on what you already know.
 
     The main goal is to **understand the target's infrastructure** rather than blindly attacking it. Many testers make the mistake of immediately brute-forcing authentication services (SSH, RDP, WinRM), which is a **noisy approach** that can get them blacklisted. Instead, a smarter approach is to first analyze the company's setup, security measures, and services before launching attacks
-*   **Enumeration Methodology**
 
-    <figure><img src="../../.gitbook/assets/imavge.png" alt=""><figcaption></figcaption></figure>
+## **Enumeration Methodology**
 
-    <figure><img src="../../.gitbook/assets/imdage.png" alt=""><figcaption></figcaption></figure>
-* **How to identify a company's online presence?**
-  1. use SSL certificate to collect subdomains
-  2.  [crt.sh](https://crt.sh/). This source is [Certificate Transparency](https://en.wikipedia.org/wiki/Certificate_Transparency) logs, which SSL certificate is assigned in audit-proof logs
+<figure><img src="../../.gitbook/assets/imavge.png" alt=""><figcaption></figcaption></figure>
 
-      <figure><img src="../../.gitbook/assets/Screenshot 2025-03-14 220646.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/imdage.png" alt=""><figcaption></figcaption></figure>
 
-      ```bash
-      # use to filter unique subdomain
-      curl -s <https://crt.sh/\\?q\\=inlanefreight.com\\&output\\=json> | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\\\n/,"\\n");}1;' | sort -u
+## **How to identify a company's online presence?**
 
-      ```
-  3.  Shodan - IP List
+1. use SSL certificate to collect subdomains
+2.  [crt.sh](https://crt.sh/). This source is [Certificate Transparency](https://en.wikipedia.org/wiki/Certificate_Transparency) logs, which SSL certificate is assigned in audit-proof logs
 
-      ```bash
-      # extract IPs
-      for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
-      ```
+    <figure><img src="../../.gitbook/assets/Screenshot 2025-03-14 220646.png" alt=""><figcaption></figcaption></figure>
 
-      ```bash
-      # search in shodan using IPs
-      for i in $(cat ip-addresses.txt);do shodan host $i;done
+    ```bash
+    # use to filter unique subdomain
+    curl -s <https://crt.sh/\\?q\\=inlanefreight.com\\&output\\=json> | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\\\n/,"\\n");}1;' | sort -u
 
-      ##to add API key
-      shodan init API_KEY
+    ```
+3.  Shodan - IP List
 
-      ```
-  4.  DNS Records
+    ```bash
+    # extract IPs
+    for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
+    ```
 
-      dig tool
+    ```bash
+    # search in shodan using IPs
+    for i in $(cat ip-addresses.txt);do shodan host $i;done
 
-      ```bash
-      dig +noall +answer google.com NS # to get the DNS server
-      dig +noall +answer google.com TXT # Some records may include verification keys for third-party services (e.g., Google, Microsoft).
-      dig +noall +answer microsoft.com A # to get ipv4 address
-      dig +noall +answer microsoft.com MX # mail server
-      dig +noall +answer microsoft.com CNAME # alias names
-      dig +noall +answer microsoft.com AAAA # ipv6 
-      dig +noall +answer microsoft.com ANY # to get all of the above
-      dig +noall +answer @spacific_DNS_Server microsoft.com ANY # to search in specific dns server
+    ##to add API key
+    shodan init API_KEY
 
-      ```
+    ```
+4.  DNS Records
 
-      dnsrecon tool
+    dig tool
 
-      ```bash
-      dnsrecon -d microsfot.com 
-      dnsrecon -d microsfot.com -n specific_dns_server 
-      ```
+    ```bash
+    dig +noall +answer google.com NS # to get the DNS server
+    dig +noall +answer google.com TXT # Some records may include verification keys for third-party services (e.g., Google, Microsoft).
+    dig +noall +answer microsoft.com A # to get ipv4 address
+    dig +noall +answer microsoft.com MX # mail server
+    dig +noall +answer microsoft.com CNAME # alias names
+    dig +noall +answer microsoft.com AAAA # ipv6 
+    dig +noall +answer microsoft.com ANY # to get all of the above
+    dig +noall +answer @spacific_DNS_Server microsoft.com ANY # to search in specific dns server
+
+    ```
+
+    dnsrecon tool
+
+    ```bash
+    dnsrecon -d microsfot.com 
+    dnsrecon -d microsfot.com -n specific_dns_server 
+    ```
+
 *   **Cloud Resources**
 
     * **Publicly accessible storage (S3, Blobs, Cloud Storage)** can expose **sensitive data** if left open.
