@@ -11,7 +11,7 @@ subfinder -dL domains.txt -o subs.com
 subfinder -d test.com -o subs.com 
 ```
 
-#### Amass
+### Amass
 
 ```bash
 # passive
@@ -24,13 +24,13 @@ subfinder -d test.com -o subs.com
 └─$ amass enum  -src -ip -brute -min-for-recursive 2 -d example.com -o example.com.subs
 ```
 
-Assetfinder
+### Assetfinder
 
 ```bash
 └─$ assetfinder [--subs-only] <domain>
 ```
 
-SubEnum
+### SubEnum
 
 ```bash
 # Basic Usage
@@ -40,13 +40,13 @@ SubEnum
 └─$ subenum -l domains.txt -r
 ```
 
-TheHarvester
+### TheHarvester
 
 ```bash
 └─$ theHarvester -d cisco.com -b all 
 ```
 
-CRT
+### CRT
 
 ```bash
 # use to filter unique subdomain
@@ -59,9 +59,9 @@ curl -s <https://crt.sh/\\?q\\=inlanefreight.com\\&output\\=json> | jq . | grep 
 
 [https://shrewdeye.app/](https://shrewdeye.app/)
 
-google dorking
+### google dorking
 
-unique subdomain
+### unique subdomain
 
 ```bash
 cat subdomains.txt | anew >> unique_subdomains.txt
@@ -75,131 +75,138 @@ cat subdomains.txt | anew >> unique_subdomains.txt
 subzy run --targets unique_subdomains.txt --vuln --hide_fails
 ```
 
-dig
+### dig
 
 ```bash
 dig +noall +answer @8.8.8.8 target.com CNAME
 ```
 
-nslookup
+### nslookup
 
 ```bash
 nslookup taget.com
 ```
 
-*   <mark style="color:red;">**Live subdomain**</mark>
+## <mark style="color:red;">**Live subdomain**</mark>
 
-    Httpx all thing about targets
+### Httpx all thing about targets
 
-    <pre class="language-bash"><code class="lang-bash"><strong>cat subs.txt | httpx -sc -title -ip -cname -method -o httpx.txt
-    </strong></code></pre>
+<pre class="language-bash"><code class="lang-bash"><strong>cat subs.txt | httpx -sc -title -ip -cname -method -o httpx.txt
+</strong></code></pre>
 
-    Httpx 200 status code
+### Httpx 200 status code
 
-    ```bash
-    cat subs.txt | httpx -fc 403,401,302,301,404 -o 200.txt
-    ```
+```bash
+cat subs.txt | httpx -fc 403,401,302,301,404 -o 200.txt
+```
 
-    httpx all ips and ports on host
+### httpx all ips and ports on host
 
-    ```bash
-    cat subs.txt | httpx -pa -p -o ips.txt
-    ```
-*   <mark style="color:red;">**port scanning**</mark>
+```bash
+cat subs.txt | httpx -pa -p -o ips.txt
+```
 
-    ```bash
-    # part of ports
-    └─$ naabu -list subs.txt -top-ports 1000 -exclude-ports 80,443,21,22,25 -o ports.txt
+### <mark style="color:red;">**port scanning**</mark>
 
-    # all ports
-    └─$ naabu -list subs.txt -p- -exclude-ports 80,443,21,22,25 -o ports.txt
+```bash
+# part of ports
+└─$ naabu -list subs.txt -top-ports 1000 -exclude-ports 80,443,21,22,25 -o ports.txt
 
-    sudo unicornscan -ImT ip_add:1-2000
-    ```
+# all ports
+└─$ naabu -list subs.txt -p- -exclude-ports 80,443,21,22,25 -o ports.txt
 
-    using Shodan
+sudo unicornscan -ImT ip_add:1-2000
+```
 
-    ```bash
-    # extract IPs
-    for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
-    ```
+### using Shodan
 
-    ```bash
-    # search in shodan using IPs
-    for i in $(cat ip-addresses.txt);do shodan host $i;done
+```bash
+# extract IPs
+for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f4 >> ip-addresses.txt;done
+```
 
-    ##to add API key
-    shodan init API_KEY
+```bash
+# search in shodan using IPs
+for i in $(cat ip-addresses.txt);do shodan host $i;done
 
-    ```
-*   <mark style="color:red;">**endpoint**</mark>
+##to add API key
+shodan init API_KEY
 
-    waybackurl
+```
 
-    ```bash
-    cat 200.txt | waybackurls | tee -a way.txt
-    ```
+## <mark style="color:red;">**endpoints**</mark>
 
-    Katana
+### waybackurl
 
-    ```bash
-    katana -list 200.txt -o katana.txt 
-    ```
+```bash
+cat 200.txt | waybackurls | tee -a way.txt
+```
 
-    gospider
+### Katana
 
-    ```bash
-    gospider -s httpx -o gospider_output
-    ```
+```bash
+katana -list 200.txt -o katana.txt 
+```
 
-    unique
+### gospider
 
-    ```bash
-    cat *.txt | anew >> endpoint.txt
-    ```
-*   <mark style="color:red;">**auto scan**</mark>
+```bash
+gospider -s httpx -o gospider_output
+```
 
-    ```jsx
-    nuclei -l live_subs_domain.com.txt -rl 10 -bs 2 -c 2 -as -silent -s critical,high,medium
-    ```
-*   <mark style="color:red;">**Information about target**</mark>
+### unique
 
-    Shodan
+```bash
+cat *.txt | anew >> endpoint.txt
+```
 
-    [https://github.com/lothos612/shodan](https://github.com/lothos612/shodan)
+## <mark style="color:red;">**auto scan**</mark>
 
-    ```bash
-    dig +noall +answer google.com NS # to get the DNS server
-    dig +noall +answer google.com TXT # Some records may include verification keys for third-party services (e.g., Google, Microsoft).
-    dig +noall +answer microsoft.com A # to get ipv4 address
-    dig +noall +answer microsoft.com MX # mail server
-    dig +noall +answer microsoft.com CNAME # alias names
-    dig +noall +answer microsoft.com AAAA # ipv6 
-    dig +noall +answer microsoft.com ANY # to get all of the above
-    dig +noall +answer @spacific_DNS_Server microsoft.com ANY # to search in specific dns server
+```jsx
+nuclei -l live_subs_domain.com.txt -rl 10 -bs 2 -c 2 -as -silent -s critical,high,medium
+```
 
-    ```
+## <mark style="color:red;">**Information about target**</mark>
 
-    ```bash
-    # extract IPs
-    ## for search each service is locally or upload on cloud
-    for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
-    ```
+### Shodan
 
-    ```bash
-    # search in shodan using IPs
-    for i in $(cat ip-addresses.txt);do shodan host $i;done
+{% embed url="https://github.com/lothos612/shodan" %}
 
-    ##to add API key
-    shodan init API_KEY
+### Dig
 
-    ```
+```bash
+dig +noall +answer google.com NS # to get the DNS server
+dig +noall +answer google.com TXT # Some records may include verification keys for third-party services (e.g., Google, Microsoft).
+dig +noall +answer microsoft.com A # to get ipv4 address
+dig +noall +answer microsoft.com MX # mail server
+dig +noall +answer microsoft.com CNAME # alias names
+dig +noall +answer microsoft.com AAAA # ipv6 
+dig +noall +answer microsoft.com ANY # to get all of the above
+dig +noall +answer @spacific_DNS_Server microsoft.com ANY # to search in specific dns server
 
-    use for search on file : [https://buckets.grayhatwarfare.com/](https://buckets.grayhatwarfare.com/)
+```
 
-    Censys
+```bash
+# extract IPs
+## for search each service is locally or upload on cloud
+for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
+```
 
-    [https://search.censys.io/](https://search.censys.io/)
+```bash
+# search in shodan using IPs
+for i in $(cat ip-addresses.txt);do shodan host $i;done
+
+##to add API key
+shodan init API_KEY
+
+```
+
+use for search on file : [https://buckets.grayhatwarfare.com/](https://buckets.grayhatwarfare.com/)
+
+Censys
+
+[https://search.censys.io/](https://search.censys.io/)
+
 *   <mark style="color:red;">**Directory**</mark>
 
     dirsearch
