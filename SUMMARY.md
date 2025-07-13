@@ -118,6 +118,8 @@
       * [Autorun](integrations/windows-privesc/thm/autorun.md)
       * [AlwaysInstallElevated](integrations/windows-privesc/thm/alwaysinstallelevated.md)
       * [Service Escalation - Registry](integrations/windows-privesc/thm/service-escalation-registry.md)
+      * [Executable Files](integrations/windows-privesc/thm/executable-files.md)
+      * [Startup Applications](integrations/windows-privesc/thm/startup-applications.md)
 * [Wireless pentest](wireless-pentest/README.md)
   * [Wireless communication](wireless-pentest/wireless-communication.md)
   * [Common used](wireless-pentest/common-used.md)
