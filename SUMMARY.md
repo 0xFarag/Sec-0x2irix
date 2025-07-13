@@ -135,6 +135,7 @@
         * [Event Log Readers](integrations/windows-privesc/htb/windows-group-privileges/event-log-readers.md)
         * [DnsAdmins](integrations/windows-privesc/htb/windows-group-privileges/dnsadmins.md)
         * [Print Operators](integrations/windows-privesc/htb/windows-group-privileges/print-operators.md)
+        * [Server Operators](integrations/windows-privesc/htb/windows-group-privileges/server-operators.md)
 * [Wireless pentest](wireless-pentest/README.md)
   * [Wireless communication](wireless-pentest/wireless-communication.md)
   * [Common used](wireless-pentest/common-used.md)
