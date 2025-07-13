@@ -42,7 +42,7 @@ We can use the GetAppLockerPolicy cmdlet to enumerate the local, effective (enfo
 Get-MpComputerStatus
 ```
 
-![image.png](../../../../.gitbook/assets/image.png)
+![image.png](<../../../../.gitbook/assets/image (1).png>)
 
 ### **List AppLocker Rules**
 
@@ -50,7 +50,7 @@ Get-MpComputerStatus
 Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 ```
 
-<figure><img src="../../../../.gitbook/assets/image 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 1 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Test AppLocker Policy**
 
