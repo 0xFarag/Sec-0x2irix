@@ -124,7 +124,7 @@
       * [Getting the Lay of the Land](integrations/windows-privesc/htb/getting-the-lay-of-the-land/README.md)
         * [Situational Awareness](integrations/windows-privesc/htb/getting-the-lay-of-the-land/situational-awareness.md)
         * [Initial Enumeration](integrations/windows-privesc/htb/getting-the-lay-of-the-land/initial-enumeration.md)
-        * [Communication with Processes 22a1d1e7e13c80f796cbdb898b9678ba](integrations/windows-privesc/htb/getting-the-lay-of-the-land/communication-with-processes-22a1d1e7e13c80f796cbdb898b9678ba.md)
+        * [Communication with Processes](integrations/windows-privesc/htb/getting-the-lay-of-the-land/communication-with-processes.md)
 * [Wireless pentest](wireless-pentest/README.md)
   * [Wireless communication](wireless-pentest/wireless-communication.md)
   * [Common used](wireless-pentest/common-used.md)
