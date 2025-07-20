@@ -79,7 +79,7 @@ SID               : S-1-5-90-0-4
 
 **open task manger → Details → lsass process → create dump file**
 
-![image.png](../../../../.gitbook/assets/image.png)
+![image.png](<../../../../.gitbook/assets/image (5).png>)
 
 ***
 
@@ -105,4 +105,4 @@ winlogon.exe                   612 Console                    1     10,408 K
 
 Here we can target `winlogon.exe` running under PID 612, which we know runs as SYSTEM on Windows hosts.
 
-<figure><img src="../../../../.gitbook/assets/image 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 1 (4).png" alt=""><figcaption></figcaption></figure>

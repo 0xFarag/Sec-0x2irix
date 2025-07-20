@@ -20,6 +20,6 @@ Permission specifically applied to Files
 
 Explicit Deny ⇒ Explicit Allow ⇒ Inherit Deny ⇒ Inherit Allow
 
-<figure><img src="../../../.gitbook/assets/image 2 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Ture isn’t clear that’s mean ⇒ inherits

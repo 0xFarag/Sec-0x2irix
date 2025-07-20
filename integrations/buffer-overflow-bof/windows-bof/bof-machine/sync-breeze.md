@@ -1,6 +1,6 @@
 # sync breeze
 
-![image.png](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png>)
+![image.png](<../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png>)
 
 *   **Scan machine**
 
@@ -77,7 +77,7 @@ after search we find this is old version which is vulnerable to BOF so lets down
 
     create offset by using Metasploit
 
-<figure><img src="../../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 ./pattern_create.rb -l 800
@@ -85,7 +85,7 @@ after search we find this is old version which is vulnerable to BOF so lets down
 
 then send it by python script we will notice this machine is crashed
 
-<figure><img src="../../../../.gitbook/assets/image 3 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 3 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 and the offset is 780
 
@@ -97,13 +97,13 @@ let’s know which is four is overwrite in EIP
 
     use `nasm shell` tool to transfer **JMP ESP** to op code
 
-<figure><img src="../../../../.gitbook/assets/image 4 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 use mona to search on this code we found this add `10090C83`
 
 after transfer this address to **Little Endian**
 
-<figure><img src="../../../../.gitbook/assets/image 5 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 5 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```python
 #!/bin/python3

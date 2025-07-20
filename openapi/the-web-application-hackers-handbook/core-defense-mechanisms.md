@@ -87,7 +87,7 @@ suppose all user inputs is malicious and must be filtered
     ```
 * **Boundary Validation**→ like checking your bag at different checkpoints before entering a place. At each checkpoint, the data (like a user’s info) is checked to make sure it’s safe. For example, when someone logs in, the username and password are checked for mistakes first, then they’re safely used in a database search, then passed to other services without causing issues, and finally shown on the screen in a secure way. This helps stop problems like hacking or breaking the app.
 
-<figure><img src="../../.gitbook/assets/image 1 (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 1 (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Multistep Validation and Canonicalization** → When you receive data from a user, there might be steps to filter or sanitize it. But if you're cleaning things up in multiple steps, sometimes attackers can slip malicious data between those steps if you're not careful. For example, if you try to block `<script>` tags, an attacker might sneak them in as `<scr<script>ipt>`. Also, if you're trying to block certain characters like quotation marks, they might use encoding tricks like `%27` to bypass your checks.
 
@@ -97,7 +97,7 @@ suppose all user inputs is malicious and must be filtered
 
 * **Handling errors** → application must handle error without any message for user to how can solve this error like:
 
-<figure><img src="../../.gitbook/assets/image 2 (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 2 (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 *   **Maintaining audit logs** → help owners to understand what happen exactly what has taken place, which vulnerabilities (if any) were exploited
 
@@ -118,7 +118,7 @@ suppose all user inputs is malicious and must be filtered
 
     * Best practice? Store logs on a separate system that only accepts updates from the application. For extra security, save logs on write-once media to prevent tampering, even in case of a breach.
 
-<figure><img src="../../.gitbook/assets/image 3 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 3 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 *   **Alerting administrators** → When someone tries to attack your application, it’s not enough to just log what happened and investigate later. Sometimes, you need to act immediately, like blocking the attacker's IP, disabling their account, or even shutting down the app temporarily if it’s a serious attack. But the most important thing is that the alerts sent to the administrators (admins) should be accurate. You need to notify them about real attacks without overwhelming them with too many unnecessary alerts.
 
@@ -161,7 +161,7 @@ Your application’s admin panel is like the "control room" for managing user ac
    * Admin areas are often less tested because admins are considered “trusted.”
    * They perform risky tasks (like accessing server files), making them dangerous if hacked.
 
-<figure><img src="../../.gitbook/assets/image 4 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image 4 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
