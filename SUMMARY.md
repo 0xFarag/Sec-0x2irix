@@ -85,7 +85,6 @@
     * [Super Process Machine](integrations/linux-privilege-escalation/super-process-machine.md)
     * [Anonymous Machine](integrations/linux-privilege-escalation/anonymous-machine.md)
     * [Checklist](integrations/linux-privilege-escalation/checklist.md)
-    * [Sheet cheat](integrations/linux-privilege-escalation/sheet-cheat.md)
     * [Automated tool](integrations/linux-privilege-escalation/automated-tool.md)
   * [Active Directory](integrations/active-directory/README.md)
     * [Authentication](integrations/active-directory/authentication/README.md)
