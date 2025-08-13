@@ -111,15 +111,15 @@ Next, we go back to the General tab and see that the `Issued by` field is popula
 
 If we open `Task Manager`, we will see that the browser instance was launched as SYSTEM.
 
-<figure><img src="../../../../.gitbook/assets/image 2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 2 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, we can right-click anywhere on the web page and choose `View page source`. Once the page source opens in another tab, right-click again and select `Save as`, and a `Save As` dialog box will open.
 
-<figure><img src="../../../../.gitbook/assets/image 3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 3 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 At this point, we can launch any program we would like as SYSTEM. Type `c:\windows\system32\cmd.exe` in the file path and hit enter. If all goes to plan, we will have a cmd.exe instance running as SYSTEM.
 
-<figure><img src="../../../../.gitbook/assets/image 4 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 4 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Microsoft released a [patch](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2019-1388) for this issue in November of 2019. Still, as many organizations fall behind on patching, we should always check for this vulnerability if we gain GUI access to a potentially vulnerable system as a low-privilege user.
 
@@ -253,7 +253,7 @@ irix@htb[/htb]$ guestmount --add WEBSRV10.vhdx  --ro /mnt/vhdx/ -m /dev/sda1
 
 In Windows, we can right-click on the file and choose `Mount`, or use the `Disk Management` utility to mount a `.vhd` or `.vhdx` file. If preferred, we can use the [Mount-VHD](https://docs.microsoft.com/en-us/powershell/module/hyper-v/mount-vhd?view=windowsserver2019-ps) PowerShell cmdlet. Regardless of the method, once we do this, the virtual hard disk will appear as a lettered drive that we can then browse.
 
-<figure><img src="../../../../.gitbook/assets/image 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 5 (1).png" alt=""><figcaption></figcaption></figure>
 
 #### **Retrieving Hashes using Secretsdump.py**
 

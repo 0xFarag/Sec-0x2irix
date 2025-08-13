@@ -198,6 +198,8 @@
   * [Secure\_Calc](editor/secure_calc.md)
   * [Watermelon CTF](editor/watermelon-ctf.md)
   * [web app pentest](editor/web-app-pentest.md)
+  * [Page 1](editor/page-1.md)
+  * [ERA](editor/era.md)
 * [Writeups](writeups/README.md)
   * [My methodology to bypass CSRF](writeups/my-methodology-to-bypass-csrf.md)
 * [Contact me](contact-me.md)

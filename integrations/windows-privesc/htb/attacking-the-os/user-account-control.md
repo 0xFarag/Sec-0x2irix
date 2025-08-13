@@ -95,11 +95,11 @@ Major  Minor  Build  Revision
 
 This returns the build version 14393, which using [this](https://en.wikipedia.org/wiki/Windows_10_version_history) page we cross-reference to Windows release `1607`.
 
-![image.png](<../../../../.gitbook/assets/image (1).png>)
+![image.png](<../../../../.gitbook/assets/image (1) (1).png>)
 
 > **The** [**UACME**](https://github.com/hfiref0x/UACME) **project maintains a list of UAC bypasses, including information on the affected Windows build number, the technique used, and if Microsoft has issued a security update to fix it**
 
-<figure><img src="../../../../.gitbook/assets/image 1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## **Reviewing Path Variable**
 
