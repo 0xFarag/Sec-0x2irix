@@ -2,8 +2,9 @@
 
 ![](<../.gitbook/assets/Screenshot_2025 08 13_184528 removebg preview.png>)
 
-| Linux | Medium | Active | 26/07/2025 |
-| ----- | ------ | ------ | ---------- |
+| OS    | Difficulty | Machine | Released   |
+| ----- | ---------- | ------- | ---------- |
+| Linux | Medium     | Active  | 26/07/2025 |
 
 ## **Machine info**
 
