@@ -22,7 +22,7 @@ The key observation is that the CRON job runs very frequently, spawning multiple
 
 ```bash
 ┌──(irix㉿irix)-[~/THM/era]
-**└─$ nmap -T4 -Pn -A 10.10.11.79**
+└─$ nmap -T4 -Pn -A 10.10.11.79
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 3.0.5
 80/tcp open  http    nginx 1.18.0 (Ubuntu)
