@@ -1,12 +1,12 @@
 # Voleur
 
-<figure><img src="../.gitbook/assets/635619778e50cc8f69df91cc6ae149c4-removebg-preview.png" alt="" width="150"><figcaption></figcaption></figure>
+## Box Info
 
-| OS      | Difficulty | Machine | Released   |
-| ------- | ---------- | ------- | ---------- |
-| Windows | Medium     | Active  | 05/07/2025 |
+***
 
-## **Machine info**
+| OS      | Difficulty |
+| ------- | ---------- |
+| Windows | Medium     |
 
 As is common in real life Windows pentests, you will start the Voleur box with credentials for the following account: ryan.naylor / HollowOct31Nyt
 

@@ -1,12 +1,12 @@
 # ERA
 
-![](<../.gitbook/assets/Screenshot_2025 08 13_184528 removebg preview.png>)
+## **Box Info**
 
-| OS    | Difficulty | Machine | Released   |
-| ----- | ---------- | ------- | ---------- |
-| Linux | Medium     | Active  | 26/07/2025 |
+***
 
-## **Machine info**
+| OS    | Difficulty |
+| ----- | ---------- |
+| Linux | Medium     |
 
 This machine starts with web enumeration. By browsing and analyzing the target website, you discover several interesting parameters and functionalities. One of these parameters is vulnerable to Local File Inclusion (LFI), which allows reading arbitrary local files from the server.
 
