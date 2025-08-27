@@ -172,7 +172,7 @@ we found a valid subdomain call `file.era.htb` so let’s add it to hosts file t
 ## add it to hosts file
 ```
 
-![image.png](../.gitbook/assets/image.png)
+![image.png](<../.gitbook/assets/image (3).png>)
 
 > **it’s have interests function**
 
@@ -204,7 +204,7 @@ Task Completed
 
 we start to register on this site to discover it
 
-<figure><img src="../.gitbook/assets/image 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 1 (2).png" alt=""><figcaption></figcaption></figure>
 
 we found endpoint allow us to upload files
 
@@ -214,7 +214,7 @@ we will notice after upload file, we have id for our file
 in this case we will think little to test IDOR vulnerability
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 2 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### ID Fuzzing
 
@@ -365,7 +365,7 @@ back to `filedb.sqlite` and use admin information
 
 return to reset function to try reset question for admin user
 
-<figure><img src="../.gitbook/assets/image 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 3 (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 we success to reset security and we get `If the user exists, answers have been updated — redirecting…` then try login again with `login security question`
@@ -387,7 +387,7 @@ http://file.era.htb/?id=1&show=true&format=php://filter/read=convert.base64-enco
 
 but nothing it occur
 
-<figure><img src="../.gitbook/assets/image 4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 4 (2).png" alt=""><figcaption></figcaption></figure>
 
 after return to our mind map we found we can replace php with ssh2
 

