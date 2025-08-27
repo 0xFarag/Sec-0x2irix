@@ -111,6 +111,7 @@
         * [LLMNR/NBT-NS Poisoning -Windows](integrations/active-directory/attacks/llmnr-nbt-ns/llmnr-nbt-ns-poisoning-windows/README.md)
           * [Lab](integrations/active-directory/attacks/llmnr-nbt-ns/llmnr-nbt-ns-poisoning-windows/lab.md)
       * [Hunting For A User](integrations/active-directory/attacks/hunting-for-a-user.md)
+      * [Hashes](integrations/active-directory/attacks/hashes.md)
   * [Windows PrivEsc](integrations/windows-privesc/README.md)
     * [Windows Commands](integrations/windows-privesc/windows-commands/README.md)
       * [Common commands](integrations/windows-privesc/windows-commands/common-commands.md)
