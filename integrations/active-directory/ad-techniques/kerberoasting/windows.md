@@ -390,4 +390,4 @@ AES-128 (type 17) → `$krb5tgs$17$*`
     .\Rubeus.exe kerberoast /tgtdeleg /user:testspn /nowrap
     ```
 
-    ![image.png](../../../../.gitbook/assets/image.png)
+    ![image.png](<../../../../.gitbook/assets/image (1).png>)

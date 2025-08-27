@@ -2,7 +2,7 @@
 
 we start to know all paths are stored
 
-![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 then we want to know what are folder is writable
 
