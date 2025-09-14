@@ -68,7 +68,7 @@ Rubeus.exe ptt /ticket:"base64 | file.kirbi" # Rubues allows base64 format as al
 
 The printer bug uses an RPC call of MS-RPRN (`print spooler service`) which allows any domain user can force any machine that running the Spooler service to connect to second a machine of the domain user's choice.
 
-![image.png](../../../.gitbook/assets/image.png)
+![image.png](<../../../.gitbook/assets/image (3).png>)
 
 **1. Run on compromised Server Rubeus monitor**
 
@@ -79,7 +79,7 @@ Rubeus.exe monitor /interval:5 /nowrap
 # spectator on ticket in memoty
 ```
 
-<figure><img src="../../../.gitbook/assets/image 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 1 (1).png" alt=""><figcaption></figcaption></figure>
 
 2. Run on compromised Domain User the RPC Call using [SpoolSample](https://github.com/leechristensen/SpoolSample) \ [Coercer](https://github.com/p0dalirius/Coercer)
 

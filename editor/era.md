@@ -172,7 +172,7 @@ we found a valid subdomain call `file.era.htb` so let’s add it to hosts file t
 ## add it to hosts file
 ```
 
-![image.png](<../.gitbook/assets/image (3).png>)
+![image.png](<../.gitbook/assets/image (3) (1).png>)
 
 > **it’s have interests function**
 
@@ -416,7 +416,7 @@ python3 penelope.py
 # f12 to Session detached to use modules in this session
 ```
 
-<figure><img src="../.gitbook/assets/image 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 5 (1).png" alt=""><figcaption></figcaption></figure>
 
 > now you have user flag
 
@@ -426,7 +426,7 @@ python3 penelope.py
 
 using `linpeas` you will notice file call `monitor` run with SUID privilege and we can exploit it
 
-<figure><img src="../.gitbook/assets/image 6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image 6 (1).png" alt=""><figcaption></figcaption></figure>
 
 we will notice in machine
 

@@ -8,11 +8,11 @@ cat /etc/crontab
 find / -path /proc -prune -o -type f -perm -o+w 2>/dev/null
 ```
 
-![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 we found two bash script so let’s know the privileges of this files
 
-<figure><img src="../../../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 so we found \[`overwrite.sh](http://overwrite.sh)` we can write in this file so let’s take a revers shell
 

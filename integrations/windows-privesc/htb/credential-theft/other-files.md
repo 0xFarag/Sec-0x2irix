@@ -64,7 +64,7 @@ Mode                 LastWriteTime         Length Name
 
 We can copy the three `plum.sqlite*` files down to our system and open them with a tool such as [DB Browser for SQLite](https://sqlitebrowser.org/dl/) and view the `Text` column in the `Note` table with the query `select Text from Note;`.
 
-![image.png](<../../../../.gitbook/assets/image (2) (1).png>)
+![image.png](<../../../../.gitbook/assets/image (2) (1) (1).png>)
 
 #### **Viewing Sticky Notes Data Using PowerShell**
 

