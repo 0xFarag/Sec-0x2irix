@@ -10,7 +10,11 @@
 
 ## 0x1 Nmap Scan
 
+***
+
 ### TCP Scan
+
+***
 
 ```bash
 nmap -sV -sC 10.10.11.87
@@ -29,6 +33,8 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 we try to scan all ports but just `ssh` is only open using TCP Scan
 
 ### UDP Scan
+
+***
 
 ```bash
 sudo nmap -sU -T4 10.10.11.87
@@ -63,6 +69,8 @@ we will notice **port 500** is open which associated with the **IKE** (Internet 
 
 ## 0x2 IKE-Scan
 
+***
+
 `ike-scan` probes IKE (ISAKMP) services (typically UDP/500 or UDP/4500 with NAT-T) to discover VPN gateways and fingerprint them (Vendor ID/backoff). Key features:
 
 ```bash
@@ -84,6 +92,8 @@ sudo ike-scan 10.10.11.87
 
 ### Aggressive Scan
 
+***
+
 ```bash
 sudo ike-scan --aggressive --pskcrack=psk.out 10.10.11.87
 ```
@@ -93,6 +103,8 @@ sudo ike-scan --aggressive --pskcrack=psk.out 10.10.11.87
 ![](../.gitbook/assets/image.png)
 
 ### Crack PSK
+
+***
 
 ```bash
 psk-crack -d ~/wordlist/rockyou.txt psk.out
@@ -107,6 +119,8 @@ Ending psk-crack: 8045039 iterations in 5.740 seconds (1401687.07 iterations/sec
 ```
 
 ## 0x3 Initial foothold
+
+***
 
 ```bash
 ssh ike@10.10.11.87 
