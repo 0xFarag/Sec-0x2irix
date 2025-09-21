@@ -111,7 +111,7 @@ Next, we go back to the General tab and see that the `Issued by` field is popula
 
 If we open `Task Manager`, we will see that the browser instance was launched as SYSTEM.
 
-<figure><img src="../../../../.gitbook/assets/image 2 (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, we can right-click anywhere on the web page and choose `View page source`. Once the page source opens in another tab, right-click again and select `Save as`, and a `Save As` dialog box will open.
 

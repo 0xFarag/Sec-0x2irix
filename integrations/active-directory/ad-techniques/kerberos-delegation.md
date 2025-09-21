@@ -79,7 +79,7 @@ Rubeus.exe monitor /interval:5 /nowrap
 # spectator on ticket in memoty
 ```
 
-<figure><img src="../../../.gitbook/assets/image 1 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image 1 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 2. Run on compromised Domain User the RPC Call using [SpoolSample](https://github.com/leechristensen/SpoolSample) \ [Coercer](https://github.com/p0dalirius/Coercer)
 

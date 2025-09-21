@@ -77,7 +77,7 @@ after search we find this is old version which is vulnerable to BOF so lets down
 
     create offset by using Metasploit
 
-<figure><img src="../../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image 2 (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```bash
 ./pattern_create.rb -l 800
